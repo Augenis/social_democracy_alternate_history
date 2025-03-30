@@ -290,12 +290,12 @@ tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_adv
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
+- @centrist: Add Friends of the President
+- @left: Add Militarists
+- @reformist: Add Nationalists
 - @labor: Add Labor
-- @neorev: Add Neorevisionists
-- @nonfactional: Add non-factional advisors
+- @neorev: Add Bürgerblock
+- @nonfactional: Add other advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -320,7 +320,7 @@ view-if: n_advisors < 3
 - #labor_advisor
 
 @neorev
-view-if: neorevisionism > 0 and n_advisors < 3
+view-if: n_advisors < 3
 
 - #neorev_advisor
 
@@ -330,8 +330,8 @@ view-if: n_advisors < 3
 - #nonfactional_advisor
 
 @add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+title: Oskar von Hindenburg
+subtitle: The son of President Hindenburg, Oskar von Hindenburg is an important advisor for his father and an ally of Schleicher, his personal friend. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: center_advisor
@@ -366,8 +366,8 @@ go-to: advisor_menu
 Hermann Müller is now an advisor.
 
 @add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+title: Kurt von Schleicher
+subtitle: Kurt von Schleicher is an "adopted son" of General Wilhelm Groener and the primary liaison between the Reichswehr and the government, as well as a member of Hindenburg's Kamarilla. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -381,8 +381,8 @@ Rudolf Breitscheid is now an advisor.
 
 
 @add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+title: Gottfried Treviranus
+subtitle: Gottfried Treviranus is a notable DNVP figure and leader of the 'Volkskonservative' faction. Promoting him would be useful if we want to turn the DNVP to a more productive course. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
 tags: reformist_advisor
@@ -393,8 +393,8 @@ go-to: advisor_menu
 Carl Severing is now an advisor.
 
 @add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+title: Wilhelm von Gayl
+subtitle: Wilhelm von Gayl is a notable member of the DNVP and an influential civil servant, whose assistance will be crucial to bring order to the streets. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
 card-image: img/portraits/BraunOtto.jpg
 tags: reformist_advisor
@@ -405,8 +405,8 @@ go-to: advisor_menu
 Otto Braun is now an advisor.
 
 @add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+title: Martin Schiele
+subtitle: Martin Schiele is the chairman of the Reichslandbund and an influential DNVP leader. He is the first pick for Agriculture Minister in any Presidential government and brings a protectionist program to relieve our farmers. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
@@ -417,8 +417,8 @@ tags: reformist_advisor
 Marie Juchacz is now an advisor.
 
 @add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+title: Gregor Strasser
+subtitle: Gregor Strasser is one of Hitler's main rivals in the NSDAP. Despite being ostensibly more left-wing, he is more willing to have NSDAP join a Presidential government as he believes the NSDAP cannot take power by itself. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
 is-card: true
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
@@ -433,8 +433,8 @@ Antonie Pfülf is now an advisor.
 # left
 
 @add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former KPD leader who was purged for criticizing Communist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
+title: Wilhelm Groener
+subtitle: Wilhelm Groener is the former Chief of General Staff who former the 1919 pact to integrate the Reichswehr into the German Republic. Though conservative and nationalist, he supports the military's cooperation with the Republic. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
@@ -445,8 +445,8 @@ tags: left_advisor
 Paul Levi is now an advisor.
 
 @add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+title: Ferdinand von Bredow
+subtitle: Ferdinand von Bredow is the chief of military intelligence and a devoted ally of Kurt von Schleicher. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3
@@ -457,8 +457,8 @@ tags: left_advisor
 Toni Sender is now an advisor.
 
 @add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
+title: Werner von Blomberg
+subtitle: Werner von Blomberg is a former Chief of the Truppenamt and a notable supporter of Soviet-inspired totalitarian militarization of German society. He is a rival of Schleicher and will not serve in the Camarilla alongside him. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -469,8 +469,8 @@ tags: left_advisor
 Kurt Rosenfeld is now an advisor.
 
 @add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+title: Kurt von Hammerstein-Equord
+subtitle: Kurt von Hammerstein-Equord is the current Chief of the Troop Office, a close ally of Schleicher and a noted critic of the NSDAP. Depending on the situation, he would be willing to give the Reichswehr's support for a military dictatorship as an alternative to Hitler. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -481,8 +481,8 @@ tags: left_advisor
 Max Seydewitz is now an advisor.
 
 @add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+title: Friedrich Wilhelm von Willisen
+subtitle: Friedrich Wilhelm von Willisen is a lieutenant colonel and a consultant on military affairs for many civilian politicians, including Heinrich Brüning. Described as the "good genius" of the Reichswehr as opposed to Schleicher's "evil genius", he is a strong supporter of the Republic. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
