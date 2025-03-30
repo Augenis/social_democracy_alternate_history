@@ -40,7 +40,7 @@ on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Hindenburg has been removed as an advisor. His father disapproves.
 
 @remove_wels
 title: Remove Wels
@@ -49,7 +49,7 @@ tags: remove_advisor
 on-arrival: wels_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Wels has been removed as an advisor. The Centrist faction disapproves.
+Oldenburg-Januschau has been removed as an advisor. The President disapproves.
 
 @remove_muller
 title: Remove Müller
@@ -58,7 +58,7 @@ tags: remove_advisor
 on-arrival: muller_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Müller has been removed as an advisor. The Centrist faction disapproves.
+Meissner has been removed as an advisor. The President disapproves.
 
 
 @remove_breitscheid
