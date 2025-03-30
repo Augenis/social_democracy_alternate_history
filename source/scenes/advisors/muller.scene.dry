@@ -1,4 +1,4 @@
-title: Hermann Müller
+title: Otto Meissner
 is-pinned-card: true 
 tags: advisor, centrist
 card-image: img/portraits/MüllerHermann.jpg
@@ -8,7 +8,7 @@ view-if: muller_advisor = 1
 = Herman Müller
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time Social Democratic leader.
+Meissner is the head of the Office of the President and an important advisor for the President. He coordinates action between the President and the government and other day-to-day matters.
 
 - @coalition
 - @toleration
