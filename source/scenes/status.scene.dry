@@ -56,6 +56,8 @@ Government stability: very low
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
+Minister-President of Prussia: [+ prussian_leader +] ([+ prussian_government +])
+
 = Economics
 
 Inflation: [+ inflation_2 +]%
