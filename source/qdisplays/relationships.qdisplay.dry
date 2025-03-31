@@ -1,9 +1,9 @@
 
-(..5) hostile
-(5..14.9) frigid
-(14.9..29.9) cold
-(29.9..39.9) cool
-(39.9..54.9) neutral
-(54.9..64.9) warm
-(64.9..74.9) friendly
-(74.9..) very friendly
+(..5) zero
+(5..14.9) almost none
+(14.9..29.9) very low
+(29.9..39.9) low
+(39.9..54.9) average
+(54.9..64.9) high
+(64.9..74.9) very high
+(74.9..) complete
