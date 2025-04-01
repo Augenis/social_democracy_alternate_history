@@ -50,9 +50,9 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-Relationship with the Presidency: [+ hindenburg_relation : dissent +]
+Relationship with the Presidency: [+ hindenburg_relation : militancy +]
 
-Government stability: [+ coalition_dissent : coalition_dissent +]
+Government instability: [+ coalition_dissent : coalition_dissent +]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
