@@ -22,7 +22,7 @@ President: [+ president +]
 
 President's Health: good
 
-Resources available: [ + resources + ]
+Resources available: [+ resources +]
 
 Support for a Hitler Cabinet: [+ dissent_percent : dissent +]
 
