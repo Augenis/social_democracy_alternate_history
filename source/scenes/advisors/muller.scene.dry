@@ -5,7 +5,7 @@ card-image: img/portraits/MüllerHermann.jpg
 new-page: true
 view-if: muller_advisor = 1
 
-= Herman Müller
+= Otto Meissner
 
 
 Meissner is the head of the Office of the President and an important advisor for the President. He coordinates action between the President and the government and other day-to-day matters.
@@ -26,13 +26,20 @@ We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced 
 
 
 @toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
+title: Clear the agenda
+subtitle: Removes all cards from the hand.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: {!
+Q.advisor_action_timer = 6;
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
 
-We have reduced dissent among the anti-toleration factions. 
+All items from our agenda have been cleared.
 
 @snap_election
 title: Snap Election
