@@ -1,9 +1,9 @@
 
-(..5) zero
-(5..14.9) almost none
-(14.9..29.9) very low
-(29.9..39.9) low
-(39.9..54.9) average
-(54.9..64.9) high
-(64.9..74.9) very high
-(74.9..) complete
+(..5) rebellious
+(5..14.9) very disloyal
+(14.9..29.9) disloyal
+(29.9..39.9) suspicious
+(39.9..54.9) tolerant
+(54.9..64.9) loyal
+(64.9..74.9) very loyal
+(74.9..) full faith
