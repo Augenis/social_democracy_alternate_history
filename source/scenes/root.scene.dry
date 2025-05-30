@@ -579,15 +579,15 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Passing through the transitional governments of Bruening and Papen, Bonapartism assumed its purest form in the person of General Schleicher – but only in order to disclose in him its insolvency. Hostile, doubtful, or alarmed, all classes viewed this enigmatical political figure that resembled nothing so much as a question mark with the epaulettes of a general. But the chief cause for Schleicher’s failure, and, incidentally for his preceding successes as well, lay not within himself; Bonapartism cannot attain stability so long as the camp of revolution and the camp of counter-revolution have not measured their forces in battle."*
+> *"Gorbachev reminded the Politburo late in 1988 that Franklin D. Roosevelt had saved American capitalism by "borrowing socialist ideas of planning, state regulation, and... the principle of more social fairness." The implication was that Gorbachev could save socialism by borrowing from capitalism, but just how remained uncertain. "Repeated incantations about 'socialist values' and purified ideas of October,'" Chernyaev observed several months later, "provoke an ironic response in knowing listeners... They sense that there's nothing behind them."*
 
- - *Leon Trotsky Analyzes German Situation*, 1933
+ - John Lewis Gaddis, *The Cold War: A New History*, 2005
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the Soviet Union, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_main: Begin (normal difficulty)
+- @1928_main: Begin
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
@@ -622,10 +622,10 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1985
 
-Disappointingly, German democracy grows stronger by the day. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, agreements with the Western powers and the Soviet Union have given time to prepare for a second Great War - but the political left seem intent to forge a genuine peace.
+Congratulations, Comrade Gorbachev! Though the conservatives in the Politburo stepped in to prevent you from succeeding your mentor Yuri Andropov in 1984, their chosen successor Konstantin Chernenko was too old and decrepit to meaningfully suppress you, and passed away after a year himself. Now, with key support from party heavyweight Andrei Gromyko, you've been unanimously elected as the new General Secretary of the Communist Party!
 
-Against the wishes of his right-wing backers, President Hindenburg has remained loyal to the letter of the Weimar Constitution since the election of 1925. Yet, as the current Wilhelm Marx government is unpopular and the socialists are sure to benefit, the Camarilla around him awaits their opportunity to make their move.
+You lead a nation where the ideas of Lenin are, sadly, beginning to dwindle. As you witnessed chairing the Central Committee Secretariat of Agriculture, the economic system is sluggish, corrupt and unresponsive, and the leadership at the top is hardly different - old, clueless, stuck in old Brezhnevite thinking. The country needs reform, and the Soviet people and foreign leaders alike are optimistic that you might deliver.
 
 
