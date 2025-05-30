@@ -123,11 +123,18 @@ Q.spd_leader = "Müller";
 Q.hindenburg_relation = 50;
 
 
-// Does the SPD lead in Prussia?
+// The republics
 Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "Conservative";
 Q.prussian_leader = "Orlov";
+Q.baltic_party = "Conservative";
+Q.ukrbel_party = "Conservative";
+Q.caucasus_party = "Conservative";
+Q.casia_party = "Conservative";
+Q.baltic_nationalism = 30;
+Q.ukrbel_nationalism = 10;
+Q.caucasus_nationalism = 30;
+Q.casia_nationalism = 10;
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
