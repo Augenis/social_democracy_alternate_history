@@ -106,7 +106,7 @@ USA: [+ rb_militancy : militancy +]
 
 China: [+ rfb_militancy : militancy +]
 
-Oil price level: [+ sa_militancy : taxationn +]
+Oil price level: [+ sa_militancy : taxation +]
 
 = Eastern Bloc
 
