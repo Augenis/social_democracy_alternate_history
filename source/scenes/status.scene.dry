@@ -28,11 +28,11 @@ Support for a Hitler Cabinet: [+ dissent_percent : dissent +]
 
 Politburo composition:
 
-[? if sapd_formed and sapd_r > 0: Liberals: [+ sapd_r +]% ?]
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">Reformers</span>!}: [+ spd_r +]%
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Moderates</span>!}: [+ z_r +]%
-{!<span class="tooltip-text" title="Communist Party of Germany">Conservatives</span>!}: [+ kpd_r +]%
-{!<span class="tooltip-text" title="German Democratic Party">Hardliners</span>!}: [+ ddp_r +]%
+[? if sapd_formed and sapd_r > 0: {!<span class="tooltip-text" title="Supporters of full democratization and a free market economy.">Liberals</span>!}: [+ sapd_r +]% ?]
+{!<span class="tooltip-text" title="Supporters of economic and democratic reforms, though still socialist.">Reformers</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="Moderate members of the party.">Moderates</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Opponents of economic and democratic reforms.">Conservatives</span>!}: [+ kpd_r +]%
+{!<span class="tooltip-text" title="Supporters of repressive measures and rollback to pseudo-Stalinism.">Hardliners</span>!}: [+ ddp_r +]%
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
