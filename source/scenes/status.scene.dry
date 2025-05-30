@@ -24,7 +24,7 @@ Resources available: [+ resources +]
 
 = The Politburo
 
-Politburo composition:
+**Politburo composition:**
 
 [? if sapd_formed and sapd_r > 0: {!<span class="tooltip-text" title="Supporters of full democratization and a free market economy.">Liberals</span>!}: [+ sapd_r +]% ?]
 {!<span class="tooltip-text" title="Supporters of economic and democratic reforms, though still socialist.">Reformers</span>!}: [+ spd_r +]%
