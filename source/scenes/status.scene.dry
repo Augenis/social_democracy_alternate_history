@@ -68,21 +68,21 @@ Economic growth: [+ economic_growth_2 +]%
 
 Leader of the RSFSR: [+ prussian_leader +] ([+ prussian_government +])
 
-Leadership (Baltic Republics): Conservative
+Leadership (Baltic Republics): [+ baltic_party +]
 
-Nationalism (Baltic Republics): [+ hindenburg_relation : coalition_dissent +]
+Nationalism (Baltic Republics): [+ baltic_nationalism : coalition_dissent +]
 
-Leadership (Ukraine and Belarus): Conservative
+Leadership (Ukraine and Belarus): [+ ukrbel_party +]
 
-Nationalism (Ukraine and Belarus): [+ hindenburg_relation : coalition_dissent +]
+Nationalism (Ukraine and Belarus): [+ ukrbel_nationalism : coalition_dissent +]
 
-Leadership (Transcaucasia): Conservative
+Leadership (Transcaucasia): [+ caucasus_party +]
 
-Nationalism (Transcaucasia): [+ hindenburg_relation : coalition_dissent +]
+Nationalism (Transcaucasia): [+ ukrbel_nationalism : coalition_dissent +]
 
-Leadership (Central Asia): Conservative
+Leadership (Central Asia): [+ casia_party +]
 
-Nationalism (Central Asia): [+ hindenburg_relation : coalition_dissent +]
+Nationalism (Central Asia): [+ casia_nationalism : coalition_dissent +]
 
 @paramilitaries
 on-arrival: {!
