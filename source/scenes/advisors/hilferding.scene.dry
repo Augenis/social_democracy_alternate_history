@@ -1,4 +1,4 @@
-title: Oskar von Hindenburg
+title: Eduard Shervardnadze
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/HilferdingRudolf.jpg
@@ -6,9 +6,9 @@ view-if: hilferding_advisor = 1
 new-page: true
 #face-image: img/portraits/HilferdingRudolf.jpg
 
-= Rudolf Hilferding
+= Eduard Shervardnadze
 
-The son of President Hindenburg, Oskar von Hindenburg is an important advisor for his father and an important ally of Schleicher, his personal friend.
+Longtime leader of the Georgian Communist Party, Shervardnadze is an early proponent of reform and a close ally of Gorbachev. He is also an important proponent of detente.
 
 - @against_right_and_left
 - @toleration
