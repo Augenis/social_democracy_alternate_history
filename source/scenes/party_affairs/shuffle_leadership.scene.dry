@@ -290,10 +290,10 @@ tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_adv
 frequency: 1
 
 
-- @centrist: Add Friends of the President
-- @left: Add Militarists
-- @reformist: Add Nationalists
-- @labor: Add Labor
+- @centrist: Add reformers
+- @left: Add economists
+- @reformist: Add experts
+- @labor: Add conservatives
 - @neorev: Add Bürgerblock
 - @nonfactional: Add other advisors
 - @rm_main: Remove advisors instead.
