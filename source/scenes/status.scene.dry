@@ -42,11 +42,15 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 = Economics
 
-Inflation: [+ inflation_2 +]%
-
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
-Economic growth: [+ economic_growth_2 +]%
+GNP growth: [+ economic_growth_2 +]%
+
+Total factor productivity: [+ inflation_2 +]%
+
+Level of corruption: 
+
+Consumer goods supply: 
 
 # = Public Opinion
 
