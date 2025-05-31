@@ -104,17 +104,25 @@ if (Q.sa_strength) {
 }
 !}
 
-= Foreign relations
+= The Cold War
 
-USA: [+ rb_militancy : militancy +]
+World tension: 
 
-China: [+ rfb_militancy : militancy +]
+USA relations: [+ rb_militancy : militancy +]
+
+China relations: [+ rfb_militancy : militancy +]
 
 Oil price level: [+ sa_militancy : oilprice +]
 
 = Eastern Bloc
 
 Nationalism: [+ sh_militancy : coalition_dissent +]
+
+= Afghanistan
+
+Troops currently stationed:
+
+War exhaustion:
 
 @polls
 on-arrival: {!
