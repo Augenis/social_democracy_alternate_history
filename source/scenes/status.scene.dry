@@ -46,7 +46,7 @@ Total factor productivity: [+ inflation_2 +]%
 
 Level of corruption: 
 
-Consumer goods supply: 
+Consumer goods supply: [+ kpd_coalition_dissent : coalition_dissent +]
 
 # = Public Opinion
 
