@@ -8,7 +8,7 @@ new-page: true
 
 = Eduard Shervardnadze
 
-Longtime leader of the Georgian Communist Party, Shervardnadze is an early proponent of reform and a close ally of Gorbachev. He is also an important proponent of detente.
+Longtime leader of the Georgian Communist Party, Shervardnadze is an early supporter of reform and your close ally. He is also an important proponent of detente.
 
 - @against_right_and_left
 - @toleration
@@ -25,13 +25,13 @@ on-arrival: advisor_action_timer = 6; caucasus_nationalism -= 10
 We have reduced the strength of nationalism in the Caucasus.
 
 @toleration
-title: Fight corruption
-subtitle: Hilferding supports cooperation with the bourgeois parties.
+title: Support the Anti-Corruption Campaign
+subtitle: A fighter against corruption, Shervardnadze can use his Georgian experience for us.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
 
-We have reduced dissent among the anti-toleration factions.
+We have rooted out several corrupt officials thanks to Shervardnadze's support.
 
 @sherv_foreign
 title: Foreign policy
