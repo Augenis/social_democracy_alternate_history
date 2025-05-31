@@ -586,15 +586,23 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Gorbachev reminded the Politburo late in 1988 that Franklin D. Roosevelt had saved American capitalism by "borrowing socialist ideas of planning, state regulation, and... the principle of more social fairness." The implication was that Gorbachev could save socialism by borrowing from capitalism, but just how remained uncertain. "Repeated incantations about 'socialist values' and purified ideas of October,'" Chernyaev observed several months later, "provoke an ironic response in knowing listeners... They sense that there's nothing behind them."*
+> *"He reminded the Politburo late in 1988 that Franklin D. Roosevelt had saved American capitalism by "borrowing socialist ideas of planning, state regulation, and... the principle of more social fairness." The implication was that Gorbachev could save socialism by borrowing from capitalism, but just how remained uncertain. "Repeated incantations about 'socialist values' and purified ideas of October,'" Chernyaev observed several months later, "provoke an ironic response in knowing listeners... They sense that there's nothing behind them."*
 
  - John Lewis Gaddis, *The Cold War: A New History*, 2005
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+**---**
+
+**This is a game of alternate history.** While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
 For more information on the politics and government of the Soviet Union, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_main: Begin
+**---**
+
+In this game, you will play as General Secretary of the Communist Party of the Soviet Union, **Mikhail Gorbachev**, starting with his election in March 1985. The game will end in January 1992, unless interrupted earlier - whether by an internal overthrow or a putsch. 
+
+Can you reform the Soviet Union and hold on to your position of power?
+
+- @1928_main: Begin.
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
