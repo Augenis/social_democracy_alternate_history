@@ -118,7 +118,7 @@ Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 Q.spd_leader = "Müller";
 
-// hmm... maybe we can play nice with Hindenburg???
+// used for public support
 Q.hindenburg_relation = 50;
 
 // The republics
@@ -148,7 +148,9 @@ Q.rfb_militancy = 35;
 Q.sa_militancy = 2;
 Q.sh_militancy = 30;
 
-Q.rb_strength = 2000;
+// used for corruption
+Q.rb_strength = 75;
+
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.sh_strength = 500;
