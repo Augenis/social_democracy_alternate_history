@@ -104,6 +104,8 @@ World tension:
 
 USA relations: [+ rb_militancy : militancy +]
 
+President of the USA: [+ nsdap_leader +]
+
 China relations: [+ rfb_militancy : militancy +]
 
 Oil price level: [+ sa_militancy : oilprice +]
