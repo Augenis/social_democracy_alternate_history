@@ -34,31 +34,31 @@ tags: remove_advisor
 
 
 @remove_hilferding
-title: Remove Hilferding
+title: Remove Shervardnadze
 view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: hilferding_advisor = 0; spd_relation -= 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hindenburg has been removed as an advisor. His father disapproves.
+Shervardnadze has been removed as an advisor. Reformists disapprove.
 
 @remove_wels
-title: Remove Wels
+title: Remove Lukyanov
 view-if: wels_advisor = 1
 tags: remove_advisor
-on-arrival: wels_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: wels_advisor = 0; spd_relation -= 5; n_advisors -= 1
 go-to: rm_main
 
-Oldenburg-Januschau has been removed as an advisor. The President disapproves.
+Lukyanov has been removed as an advisor. Reformists disapprove.
 
 @remove_muller
-title: Remove Müller
+title: Remove Yakovlev
 view-if: muller_advisor = 1
 tags: remove_advisor
-on-arrival: muller_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: muller_advisor = 0; spd_relation -= 5; n_advisors -= 1
 go-to: rm_main
 
-Meissner has been removed as an advisor. The President disapproves.
+Yakovlev has been removed as an advisor. Reformists disapprove.
 
 
 @remove_breitscheid
@@ -330,8 +330,8 @@ view-if: n_advisors < 3
 - #nonfactional_advisor
 
 @add_hilferding
-title: Oskar von Hindenburg
-subtitle: The son of President Hindenburg, Oskar von Hindenburg is an important advisor for his father and an ally of Schleicher, his personal friend. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+title: Eduard Shervardnadze
+subtitle: Longtime leader of the Georgian Communist Party, Shervardnadze is an early supporter of reform and your close ally. He is also an important proponent of detente.
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: center_advisor
@@ -342,8 +342,8 @@ go-to: advisor_menu
 Rudolf Hilferding is now an advisor.
 
 @add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+title: Anatoly Lukyanov
+subtitle: Lukyanov, your friend since law school, is one of your closest allies and the head of the General Department of the Central Committee, responsible for day to day management of the Party. Though supportive of reform, he is sceptical of going further than simple adjustments.
 is-card: true
 card-image: img/portraits/WelsRudolf.jpg
 tags: center_advisor
@@ -354,8 +354,8 @@ go-to: advisor_menu
 Otto Wels is now an advisor.
 
 @add_muller
-title: Hermann Müller
-subtitle: Hermann Müller is the last Social Democratic Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
+title: Alexander Yakovlev
+subtitle: Purged from party leadership and exiled to the Soviet embassy in Canada, Yakovlev was restored to office by you and will loyally implement your reform agenda - though he is controversial and perhaps a little radical.
 is-card: true
 card-image: img/portraits/MüllerHermann.jpg
 tags: center_advisor
