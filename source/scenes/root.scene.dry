@@ -41,8 +41,8 @@ Q.dues = 2;
 
 // the state of the party
 // overall dissent reduces every increase in party support.
-Q.dissent = 0.03;
-Q.dissent_percent = 3;
+Q.dissent = 0.1;
+Q.dissent_percent = 10;
 
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
