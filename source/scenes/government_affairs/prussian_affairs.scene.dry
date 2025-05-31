@@ -1,36 +1,30 @@
-title: The Prussian Bulwark
+title: Oil Sales
 new-page: true
 is-card: true
-view-if: spd_prussia = 1 and prussian_affairs_timer <= 0
+view-if: prussian_affairs_timer <= 0
 on-arrival: prussian_affairs_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/braun.jpg
 #subtitle: The state government of Prussia is a bulwark of democracy...
 
-= Prussian Affairs
+= Oil Sales
 
-Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the Center and Democratic parties. It is the most stable and democratic state government in Germany, led by the able Otto Braun.
+# source on oil production - https://www.cia.gov/readingroom/docs/CIA-RDP87T00787R000100080003-5.pdf
+Isolated from much of the world, we earn much of our hard currency through the sale of oil to foreign countries - an estimated 50 percent of our hard currency exports in fact. This means that our financial situation is highly dependent on the going oil price.
 
-We can enact policies in Prussia.
+In addition, our allies are completely reliant on our oil, and their populations will suffer if we cut our oil production.
 
-- @police_loyalty: Bolster the loyalty of the police.
-- @police_strength: Recruit additional police.
-- @bureaucracy: Purge the bureaucracy of reactionary elements.
-- @ban_sa: Ban the SA, the Nazi paramilitary group.
-- @unban_sa: Reverse the SA ban.
-- @ban_rfb: Ban the RFB, the Communist paramilitary.
-- @unban_rfb: Reverse the RFB ban.
-- @ban_sh: Ban the Stahlhelm, the Nationalist paramilitary.
-- @unban_sh: Reverse the Stahlhelm ban.
-- @negotiate_concordat: Negotiate a concordat with the Vatican.
-- @sign_concordat: Sign a concordat with the Vatican.
-- @root: No new policies are needed.
+- @police_loyalty: Maintain production levels.
+- @police_strength: Reduce production levels.
+- @bureaucracy: Raise production levels.
+- @ban_sa: Start an oil embargo.
+- @ban_rfb: Negotiate with the OPEC.
 - @easy_discard
 - @cancel_advisor_action
 
 @police_loyalty
-view-if: prussian_police_loyalty < 1
-on-arrival: prussian_police_loyalty += 0.1
+subtitle: [+ sa_militancy +] resources gained.
+on-arrival: resources += sa_militancy;
 
 # increase police loyalty
 The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
