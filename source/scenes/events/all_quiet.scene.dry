@@ -1,45 +1,40 @@
-title: All Quiet on the Western Front
-subtitle: Censorship and violence over a movie...
-view-if: year = 1930 and month = 12 and spd_prussia
+title: 1985 April Plenum
+subtitle: The new General Secretary's first plenary speech.
+view-if: year = 1985 and month = 4
 max-visits: 1
 tags: event
 new-page: true
 face-image: img/All_Quiet.jpg
 
-= All Quiet on the Western Front
+= 1985 April Plenum
 
-The American film *All Quiet on the Western Front*, based on the German novel *Im Westen nichts Neues* by Erich Maria Remarque, is a film about the experiences of German soldiers in the Great War, and how they gradually became disillusioned with the ideas of patriotism and nationalism. 
+# https://www.jstor.org/stable/151659
+Eyes are on you as you prepare to make a speech before the plenary session of the Central Committee. There has been commotion in the highest levels of power - several notable party veterans have already been pushed out and replaced by more ambitious allies of your reform program, and more are sure to follow. At the same time, both the Party and the outside world are still uncertain what exactly to expect of you. You have the perception of a reformer, but Gromyko *did* describe you as a "pragmatic moderate" during your election.
 
-As an anti-war film, it is the target of major protest by far-right actors, especially the Nazis and the Stahlhelm. They are calling for the government to ban the film. If we do not ban it, the SA threatens to violently stop the film from being shown or watched.
+What point do you wish to emphasize in the speech and make the centerpiece of the first months of your rule?
 
-- @ban: Ban the film, to prevent Nazi violence.
-- @allow: Allow the film to be shown.
-- @allow_protect: Allow the film to be shown, and use the Prussian police to prevent Nazi disruptions.
-- @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
+- @ban: We must admit that our economic system has issues. There needs to be an "acceleration" of economic growth to rebuild faith in the Party.
+- @allow: We are seeing a crisis of alcoholism and idleness in our society, and must root it out with the greatest vigor possible.
+- @allow_protect: Corruption and lack of revolutionary ideals fester in the Party and government and stifle our society and economy.
 
 @ban
-on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 4; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
+on-arrival: uskorenie += 1
 
-When we ban the film, the Nazis immediately celebrate it as a major victory; they claim that even the red Marxists agree with them! It is a major boost to their morale.
+First coined by Andropov, acceleration ("*Uskoreniye*") is a plan to revamp the economy of the Soviet Union through application of new technical and scientific achievements, grandiose investment into heavy industry, increasing labour discipline and taking "the human factor" into account. The fundamentals of central planning shall be kept, but renewed vigour from above and adjustment of certain issues should breathe new life into it.
 
+The Central Committee applauds your speech. Having formulated your agenda, you must now implement it - the Party will review your accomplishments in April 1986.
 
 @allow
-on-arrival: nationalism += 3; old_middle_nsdap += 4; new_middle_nsdap += 3; workers_nsdap += 1; sa_strength += 15; pro_republic -= 3; strife += 1
+on-arrival: alcohol_campaign += 1
 
-While we allow the film, showings are marred by violence. Showings of the film eventually stop, and the Nazis claim victory.
+Alcoholism has grown significantly in the past decades, both legal consumption and illegal production of moonshine, with reported loss of productivity and a drop in life expectancy as a result. Before his death, Andropov planned a major anti-alcohol campaign - and you will continue in his footsteps. 
 
+The Central Committee applauds your speech. Having formulated your agenda, you must now implement it - the Party will review your accomplishments in April 1986.
 
 @allow_protect
-choose-if: prussian_police_loyalty >= 0.65
-unavailable-subtitle: The police are not willing to protect the film.
-on-arrival: nationalism -= 4; pro_republic += 4*(1-dissent); strife += 1
+on-arrival: corruption_campaign += 1
 
-Under the protection of the police, the people are allowed to watch the film in peace. Nazi disturbances are kept to a minimum.
+Whether we like it or not, the distribution of special privileges - cars, vacations, *dachas* - and sometimes direct bribery through "envelopes" is a fact of life of our regime. Corruption festering in the Union also takes more elusive forms - such as obfuscation of data to avoid punishment and gain favor from the Party, meaning that you and your advisors receive a far more rosy report on the state of the Union than is actually the case. Any reform is impossible without rooting this rot out.
 
-@everyone
-choose-if: prussian_police_loyalty >= 0.75
-unavailable-subtitle: The police are unable to guarantee the safety of all the attendees.
-on-arrival: nationalism -= 5; pro_republic += 5*(1-dissent); workers_nsdap -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 3
-
-Under police protection, crowds throng the film's showings, as Nazis protest outside. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.
+The Central Committee applauds your speech. Having formulated your agenda, you must now implement it - the Party will review your accomplishments in April 1986.
 
