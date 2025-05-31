@@ -113,13 +113,13 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 # labor
 
 @remove_leipart
-title: Remove Leipart
+title: Remove Gromyko
 view-if: leipart_advisor = 1
 tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: leipart_advisor = 0; z_relation -= 4; kpd_relation -= 4; n_advisors -= 1
 go-to: rm_main
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+Gromyko has been removed as an advisor. The moderates and conservatives disapprove.
 
 @remove_aufhauser
 title: Remove Aufhäuser
@@ -339,7 +339,7 @@ view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: hilferding_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+Eduard Shervardnadze is now an advisor.
 
 @add_wels
 title: Anatoly Lukyanov
@@ -351,7 +351,7 @@ view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: wels_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Otto Wels is now an advisor.
+Anatoly Lukyanov is now an advisor.
 
 @add_muller
 title: Alexander Yakovlev
@@ -363,7 +363,7 @@ view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists
 on-arrival: muller_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Hermann Müller is now an advisor.
+Alexander Yakovlev is now an advisor.
 
 @add_breitscheid
 title: Kurt von Schleicher
@@ -497,8 +497,8 @@ Anna Siemsen is now an advisor.
 # labor
 
 @add_leipart
-title: Adam Stegerwald
-subtitle: Adam Stegerwald is the leader of the non-socialist German Trade Union Federation and a heavyweight in the Centre Party. Though concerned about austerity plans, he is willing to bring organized labor behind a Presidential cabinet. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
+title: Andrei Gromyko
+subtitle: Gromyko is one of the most influential men in the Politburo and was the chief of Soviet foreign policy since 1957. Known as "Grim Grom" or "Mr. Nyet" in American press, he is respected by his Western counterparts as the Soviet Union's most capable diplomat. Once a close associate of Brezhnev, he has since shifted to supporting you.
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: labor_advisor
@@ -506,7 +506,7 @@ view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Andrei Gromyko is now an advisor.
 
 @add_aufhauser
 title: Lothar Erdmann
