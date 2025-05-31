@@ -1,8 +1,8 @@
 title: International Relations
 new-page: true
 is-card: true
-tags: party_affairs
-view-if: international_relations_timer <= 0
+tags: govt_affairs
+view-if: spd_in_government = 1 and international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/international.jpg
 max-visits: 4
