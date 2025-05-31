@@ -1,14 +1,15 @@
-title: Theodor Leipart
+title: Andrei Gromyko
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/LeipartTheodor.jpg
 view-if: leipart_advisor = 1
 new-page: true 
 
-= Theodor Leipart
+= Andrei Gromyko
 
-Leipart is a leader of the ADGB, the largest federation of socialist trade unions.
+Gromyko is one of the most influential men in the Politburo and was the chief of Soviet foreign policy since 1957. Known as "Grim Grom" or "Mr. Nyet" in American press, he is respected by his Western counterparts as the Soviet Union's most capable diplomat. Once a close associate of Brezhnev, he has since shifted to supporting you.
 
+- @grom_foreign
 - @organizing
 - @depression
 - @root: Return to main
@@ -16,29 +17,28 @@ Leipart is a leader of the ADGB, the largest federation of socialist trade union
 # leipart was one of the people who argued for union independence
 #- @union_unity
 
+@grom_foreign
+title: Foreign policy
+subtitle: Gromyko can use his leverage and influence to set our foreign policy.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
+go-to: foreign_policy
+
 @organizing
-title: Organizing workers
-subtitle: Improve our standing among the workers.
+title: Promote detente
+subtitle: A strong supporter of disarmament, Gromyko can put a good word for us with the Americans.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; workers_spd += 4*(1-dissent); workers_spd += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
+on-arrival: advisor_action_timer = 6; rb_militancy += 6; coalition_dissent += 2;
 
-We have increased our organizing among the workers.
+We have improved our relations with the USA and reduced tensions in the Cold War.
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to get us out of this mess.
-choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
-on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
-
-The WTB-Plan, standing for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions.
-
-@union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
-choose-if: advisor_action_timer <= 0
+title: Reassure the Politburo
+subtitle: Respected by the entire Party, Gromyko can reassure all factions and raise their confidence in you.
+choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
+on-arrival: advisor_action_timer = 6; kpd_relation += 4; z_relation += 4; ddp_relation += 4; spd_relation += 4; sapd_relation += 4
 
-We have reduced tensions with the Labor faction, and increased its strength in the party.
+We have reassured the Politburo and improved the loyalty of all factions.
