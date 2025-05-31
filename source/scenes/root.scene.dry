@@ -140,7 +140,7 @@ Q.casia_nationalism = 10;
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.rb_militancy = 20;
 Q.rfb_militancy = 35;
-Q.sa_militancy = 0;
+Q.sa_militancy = 2;
 Q.sh_militancy = 30;
 
 Q.rb_strength = 2000;
