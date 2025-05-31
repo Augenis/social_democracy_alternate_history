@@ -100,7 +100,7 @@ if (Q.sa_strength) {
 
 = The Cold War
 
-World tension: [+ sh_militancy : coalition_dissent +]
+World tension: [+ sh_strength : coalition_dissent +]
 
 USA relations: [+ rb_militancy : militancy +]
 
