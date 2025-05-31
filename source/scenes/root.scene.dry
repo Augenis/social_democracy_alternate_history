@@ -121,7 +121,6 @@ Q.spd_leader = "Müller";
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 50;
 
-
 // The republics
 Q.spd_prussia = 1;
 Q.prussian_government = "Conservative";
@@ -134,6 +133,12 @@ Q.baltic_nationalism = 30;
 Q.ukrbel_nationalism = 10;
 Q.caucasus_nationalism = 30;
 Q.casia_nationalism = 10;
+
+// 1985 April Plenum stuff
+
+Q.uskorenie = 0;
+Q.alcohol_campaign = 0;
+Q.corruption_campaign = 0;
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
