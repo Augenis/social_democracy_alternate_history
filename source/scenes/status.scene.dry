@@ -34,8 +34,6 @@ Resources available: [+ resources +]
 
 Politburo dissent: [+ dissent_percent : dissent +]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
-
 = Economics
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
@@ -44,7 +42,7 @@ GNP growth: [+ economic_growth_2 +]%
 
 Total factor productivity: [+ inflation_2 +]%
 
-Level of corruption: 
+Level of corruption: [+ rb_strength : corruption +]
 
 Consumer goods supply: [+ kpd_coalition_dissent : coalition_dissent +]
 
