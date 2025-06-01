@@ -15,7 +15,7 @@ Noting his experience in construction, Ligachev recommends him to head the Const
 - @allow_police: Convene a commission to check whether the reports on Sverdlovsk are true.
 
 @ban_march
-on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1;
+on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1; dissent_percent += 1;
 
 # add Yeltsin check
 Though he is not particularly happy with what he sees as a demotion, Secretary Boris Yeltsin accepts and begins his work in Moscow, immediately making an impression thanks to his determined agitation for reform. Under his management, many of the old cadres of the department have been replaced with younger faces. You are proud of having promoted a strong fresh wind for the Party.
@@ -24,14 +24,14 @@ Though he is not particularly happy with what he sees as a demotion, Secretary B
 go-to: allow_police_violence if rb_strength <= 0.65; allow_police_no_violence if rb_strength > 0.65 
 
 @allow_police_violence
-on-arrival: spd_r += 1; z_r -= 1;
+on-arrival: spd_r += 1; z_r -= 1; dissent_percent += 2;
 
-The commission in Sverdlovsk finds that much of Ligachev's statements about Secretary Boris Yeltsin have been exaggerated, and the man himself is a heavy drunkard, to the point where it would greatly ruin the reputation of the Politburo if he were appointed. With this in mind, you refuse the appointment.
+The commission in Sverdlovsk finds that many of Ligachev's statements about Secretary Boris Yeltsin have been exaggerated, and the man himself is a heavy drunkard, to the point where it would greatly ruin the reputation of the Politburo if he were appointed. With this in mind, you refuse the appointment.
 
 Ligachev and the moderates behind him are somewhat humiliated.
 
 @allow_police_no_violence
-on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1;
+on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1; dissent_percent += 1;
 
 The commission in Sverdlovsk confirms all of Ligachev's statements - Secretary Boris Yeltsin has indeed renewed Sverdlovsk and is highly supported by the people. With this in mind, you confidently approve the proposal and appoint this strong fresh wind to the department and the Politburo.
 
