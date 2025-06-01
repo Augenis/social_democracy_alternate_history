@@ -433,16 +433,16 @@ Antonie Pfülf is now an advisor.
 # left
 
 @add_levi
-title: Wilhelm Groener
-subtitle: Wilhelm Groener is the former Chief of General Staff who former the 1919 pact to integrate the Reichswehr into the German Republic. Though conservative and nationalist, he supports the military's cooperation with the Republic. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
+title: Leonid Abalkin
+subtitle: Abalkin is a trained economist and one of the representatives of the "optimal planning" school emerging from Moscow economists. Emphasizing that markets are neither "capitalist" nor "socialist", he favors a gradual process of liberalizing prices and allowing a market between autonomous state enterprises, and is interested in China's ongoing reforms.
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
-on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5
+on-arrival: levi_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: left_advisor
 
-Paul Levi is now an advisor.
+Leonid Abalkin is now an advisor.
 
 @add_sender
 title: Ferdinand von Bredow
@@ -503,7 +503,7 @@ is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: labor_advisor
 view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
+on-arrival: leipart_advisor = 1; n_advisors += 1; z_r += 2; spd_r -= 1; kpd_r -= 1
 go-to: advisor_menu
 
 Andrei Gromyko is now an advisor.
