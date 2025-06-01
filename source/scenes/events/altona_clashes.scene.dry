@@ -1,43 +1,39 @@
-title: Nazi March in Altona
+title: The Colonel from Sverdlovsk
 new-page: true
-subtitle: An SA demonstration, with the potential for violence
+subtitle: A potential new ally...
 tags: event
-view-if: year == 1932 and month == 6 and sa_banned == 0 and spd_prussia == 1
+view-if: year == 1985 and month == 6
 max-visits: 1
 
-= Nazi March in Altona
+= The Colonel from Sverdlovsk
 
-The Nazi SA is planning a march through Altona, a working-class neighborhood of Hamburg known for its high working-class population. Altona is a Communist stronghold, and the planned march will almost certainly lead to violent conflict.
+You are acutely aware of the need for younger cadres aligned with your vision of reform. Yegor Ligachev has recommended you a promising cadre - the current First Secretary of the Sverdlovsk *obkom*. There, he greatly improved the housing situation and even began the construction of a subway system. He is also known as a supporter of reform and a more "personal touch", famous for appearing in factories and shops unannounced to get a closer look to the people's lives and even holding question-and-answer sessions with Sverdlovsk residents. 
 
-- @ban_march: Ban the march before it starts.
-- @allow_police: Allow the march, with a heavy police presence.
-- @allow_no_police: Allow the march without a police presence.
+Noting his experience in construction, Ligachev recommends him to head the Construction Department of the Party's Central Committee, as well as make him a candidate member of the Politburo.
+
+- @ban_march: Appoint him to head the committee and make him a candidate member of the Politburo.
+- @allow_police: Convene a commission to check whether the reports on Sverdlovsk are true.
 
 @ban_march
-choose-if: judicial_reform >= 2
-unavailable-subtitle: The judiciary would not allow us to ban the protest, because of free speech.
-on-arrival: sa_strength -= 10
+on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1;
 
-We have banned the planned protest. The Nazis appeal the ban in the courts in the name of freedom of speech. Thankfully, the judiciary agrees with us that the Nazis' argument is specious.
-
+# add Yeltsin check
+Though he is not particularly happy with what he sees as a demotion, Secretary Boris Yeltsin accepts and begins his work in Moscow, immediately making an impression thanks to his determined agitation for reform. Under his management, many of the old cadres of the department have been replaced with younger faces. You are proud of having promoted a strong fresh wind for the Party.
 
 @allow_police
-go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no_violence if prussian_police_loyalty > 0.75 
+go-to: allow_police_violence if rb_strength <= 0.65; allow_police_no_violence if rb_strength > 0.65 
 
 @allow_police_violence
-on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1
+on-arrival: spd_r += 1; z_r -= 1;
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers (whom the police believe are communists). In response, the police fire into the surrounding buildings. Dozens are killed. All turn out to be civilians, and the reported snipers are never found.
+The commission in Sverdlovsk finds that much of Ligachev's statements about Secretary Boris Yeltsin have been exaggerated, and the man himself is a heavy drunkard, to the point where it would greatly ruin the reputation of the Politburo if he were appointed. With this in mind, you refuse the appointment.
 
-This incident has been called "Altona Bloody Sunday" in the media. The Communists assail the incompetence of the police, who are supposedly under our command.
+Ligachev and the moderates behind him are somewhat humiliated.
 
 @allow_police_no_violence
-on-arrival: sa_strength += 10
+on-arrival: spd_r += 3; z_r -= 2; kpd_r -= 1;
 
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers. The police manage to keep their cool, the shots stop, and the march disperses without further violence.
+The commission in Sverdlovsk confirms all of Ligachev's statements - Secretary Boris Yeltsin has indeed renewed Sverdlovsk and is highly supported by the people. With this in mind, you confidently approve the proposal and appoint this strong fresh wind to the department and the Politburo.
 
+Though he is not particularly happy with what he sees as a demotion, Yeltsin accepts and begins his work in Moscow, immediately making an impression thanks to his determined agitation for reform. Under his management, many of the old cadres of the department have been replaced with younger faces. 
 
-@allow_no_police
-on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
-
-When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. Gunshots are heard, reportedly from rooftop snipers. In response, the SA engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The Nazis recruit off their dead martyrs.
