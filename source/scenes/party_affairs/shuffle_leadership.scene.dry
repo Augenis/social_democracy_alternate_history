@@ -152,13 +152,13 @@ Woytinsky has been removed as an advisor. The Labor faction disapproves.
 # left
 
 @remove_levi
-title: Remove Levi
+title: Remove Abalkin
 view-if: levi_advisor = 1
 tags: remove_advisor
-on-arrival: levi_advisor = 0; left_dissent += 5; n_advisors -= 1
+on-arrival: levi_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Levi has been removed as an advisor. The Leftist faction disapproves.
+Abalkin has been removed as an advisor.
 
 @remove_sender
 title: Remove Sender
