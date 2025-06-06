@@ -24,20 +24,12 @@ on-arrival: advisor_action_timer = 6; spd_r += 5; kpd_r -= 3; z_r -= 2
 We have convinced several moderate politicians to support the General Secretary's line.
 
 @toleration
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
+title: Media
+subtitle: As secretary of propaganda, Yakovlev manages our policy on the media.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: {!
-Q.advisor_action_timer = 6;
-if (Q.difficulty >= 0) {
-    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
-} else {
-    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
-}
-!}
-
-All items from our agenda have been cleared.
+on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
+go-to: media
 
 @snap_election
 title: Agitate in the press
