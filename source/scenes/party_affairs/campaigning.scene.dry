@@ -24,13 +24,13 @@ on-arrival: spd_relation += 3; z_relation += 5; kpd_relation += 5; rb_strength +
 We have given out benefits and privileges to party cadres.
 
 @new_middle
-on-arrival: spd_r += 2; hindenburg_relation += 2; coalition_dissent += 2; rb_strength -= 2 if corruption_campaign > 0;
+on-arrival: spd_r += 2; z_r -= 2; hindenburg_relation += 2; coalition_dissent += 2; rb_strength -= 2 if corruption_campaign > 0;
 
 We have punished some sacrificial cadres and assigned them to lower posts. This earns us a little public adoration, but won't meaningfully affect the corruption level.
 
 @old_middle
 subtitle: -2 resources
-on-arrival: rb_strength -= 4; resources -= 2; corruption_campaign += 1; spd_r -= 4; coalition_dissent += 6; hindenburg_relation += 6; dissent_percent += 10;  rb_strength -= 2 if corruption_campaign > 0; 
+on-arrival: rb_strength -= 4; resources -= 2; corruption_campaign += 1; spd_r -= 4; z_r += 1; ddp_r += 1; kpd_r += 2; coalition_dissent += 6; hindenburg_relation += 6; dissent_percent += 10;  rb_strength -= 2 if corruption_campaign > 0; 
 
 Continuing after the work of Yuri Andropov, you have announced the continuation of the campaign against "moral degenerates" festering in our society. The secret services have begun putting more effort in investigating bribery and corruption on the republic and oblast level. Already, reports of busted factory managers creating fictitious work units and ministry officials living "beyond their means" fill official newspapers. The Party may be enraged at this attack on "honest cadres", but the people, who desire some action to move the Union out of its rut, show great support.
 
