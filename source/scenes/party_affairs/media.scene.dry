@@ -24,7 +24,7 @@ The media of the Soviet Union, from the famous newspapers *Pravda* and *Izvestiy
 @commercial
 title: Publish pro-government articles in the press.
 subtitle: This is standard practice to spread the government's new direction to the minds of the public.
-on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
+on-arrival: commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
 
 Several high profile articles by government secretaries, detailing the necessity of reform, have been published in major and minor newspapers alike. 
 
