@@ -4,7 +4,7 @@ subtitle: A blueprint for the future...?
 view-if: year = 1985 and month = 12
 max-visits: 1
 on-arrival: austrian_civil_war_seen = 1
-face-image: img/schutzbund.png
+face-image: img/schutzbund.jpg
 tags: event
 
 = The Yakovlev Memorandum
