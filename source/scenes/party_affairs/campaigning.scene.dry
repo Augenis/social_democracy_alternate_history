@@ -1,71 +1,36 @@
-title: Campaigning
+title: Dachas and Envelopes
 new-page: true
 on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
-view-if: spd_in_government = 1
 card-image: img/flags.jpg
 frequency: 100
 tags: party_affairs
 
-= Campaigning
+= Dachas and Envelopes
 
-Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+It is an unfortunate truth that not all are equal in the land of equality. Party cadres are rewarded with privileges, cars, dachas or straight-up "envelopes" of cash, they are able to acquire foreign goods through illicit means. A culture of corruption has developed in the Brezhnev era, to the point where some claim that one can even buy lucrative ministerial positions in the Southern republics with enough money, and that certain officials and ministers have amassed millions of rubles of worth of assets. 
 
-- @workers: The urban working class, our traditional support base.
-- @new_middle: The "new middle class" of government employees and white-collar workers.
-- @old_middle: The "old middle class" of small independent businessmen and artisans.
-- @rural: Rural workers and small farmers, who have felt neglected by us in the past.
-- @unemployed: The unemployed.
-- @catholics: Catholics, who typically support the Center Party.
-- @root: We either don't want to or cannot campaign right now.
+Your mentor, Yuri Andropov, began a loud and furious anti-corruption campaign and put the full might of the KGB to use against corrupt officials, and it seems like it actually achieved a little bit of progress. On the other hand, there's a reason why Brezhnev held until death in spite of stagnation - you don't want to experience the scorn of the bureaucratic behemoth...
+
+- @workers: Distribute more material privileges.
+- @new_middle: Make a show of anti-corruption by punishing some compromised cadres.
+- @old_middle: Continue the anti-corruption campaign.
 - @easy_discard
 
 @workers
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+on-arrival: spd_relation += 3; z_relation += 5; kpd_relation += 5; rb_strength += 3; inflation_2 -= 0.05; dissent_percent -= 5; coalition_dissent += 3; hindenburg_relation -= 3;
 
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
+We have given out benefits and privileges to party cadres.
 
 @new_middle
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+on-arrival: spd_r += 2; hindenburg_relation += 2; coalition_dissent += 2; rb_strength -= 2 if corruption_campaign > 0;
 
-We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+We have punished some sacrificial cadres and assigned them to lower posts. This earns us a little public adoration, but won't meaningfully affect the corruption level.
 
 @old_middle
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+subtitle: -2 resources
+on-arrival: rb_strength -= 4; resources -= 2; corruption_campaign += 1; spd_r -= 4; coalition_dissent += 6; hindenburg_relation += 6; dissent_percent += 10;  rb_strength -= 2 if corruption_campaign > 0; 
 
-We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
+Continuing after the work of Yuri Andropov, you have announced the continuation of the campaign against "moral degenerates" festering in our society. The secret services have begun putting more effort in investigating bribery and corruption on the republic and oblast level. Already, reports of busted factory managers creating fictitious work units and ministry officials living "beyond their means" fill official newspapers. The Party may be enraged at this attack on "honest cadres", but the people, who desire some action to move the Union out of its rut, show great support.
 
-@rural
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
-
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
-
-@unemployed
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
-
-We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
-
-@catholics
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-view-if: peoples_party == 1
-on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
-
-We have increased our campaigning among Catholics.
