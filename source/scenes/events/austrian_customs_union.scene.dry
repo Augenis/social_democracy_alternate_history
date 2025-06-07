@@ -21,12 +21,12 @@ For the past ten years, Gaddafi has been supported by us, both with generous sup
 @let_it_happen
 unavailable-subtitle: The Politburo will not approve this.
 choose-if: grand_coalition < 50
-on-arrival: rb_militancy = -5; rfb_militancy = -2; sh_strength = +5
+on-arrival: rb_militancy -= 5; rfb_militancy -= 2; sh_strength += 5
 
 The Black Sea Fleet does emergency maneuvers and additional air wings are deployed to Libya, threatening to intercept American planes should any more bomb raids take place. Reagan denounces you for harboring a sponsor of international terrorism, and relations with the Western powers worsen noticeably.
 
 @end_coalition
-on-arrival: rb_militancy = -1; kpd_relation -= 5; ddp_relation -= 7; dissent_percent += 2; dissent_percent += 3 if grand_coalition < 50
+on-arrival: rb_militancy -= 1; kpd_relation -= 5; ddp_relation -= 7; dissent_percent += 2; dissent_percent += 3 if grand_coalition < 50
 
 We lodge diplomatic protests at the American bombings and cancel some less important meetings with American diplomats - a standard procedure in the Cold War which should not affect our relations with the US administration much. However, conservatives and hardliners in the Party leadership are frustrated at you giving up such an opportunity to expand our influence.
 
@@ -37,13 +37,13 @@ go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fai
 # WIP. things needed: at least 1 military modernization investment, hasn't done Glasnost yet, progress in making peace in Afghanistan.
 
 @end_toleration_success
-on-arrival: rb_militancy = -2; sh_strength = +4; prussian_concordat_progress += 1;
+on-arrival: rb_militancy -= 2; sh_strength += 4; prussian_concordat_progress += 1;
 
 We point to the failure of the Libyan army during the operation as well as the threat posed to Gaddafi to push him to make a more beneficial deal with us, more closely align with socialist orthodoxy, cease overt support for terrorists in Western countries as well as cooperate on raising the international oil price. In exchange, we offer some of our modern military technology to him, and promise to steadily withdraw from Afghanistan. 
 
 Gaddafi agrees, though reluctantly. Thanks to his influence in OPEC and the Arab world, this should help us in any negotiations with the OPEC regarding international oil production. The West is, understandably, frightened by our arrangement.
 
 @end_toleration_fail
-on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sh_strength = -2;
+on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sh_strength -= 2;
 
 Gaddafi treats our attempts to pressure him in his moment of "victory" as a slap in the face and begins cutting his ties with us. The Soviet mission in Libya is steadily reduced. Ironically, this actually improves global tensions, and may perhaps hasten his overthrow later on.
