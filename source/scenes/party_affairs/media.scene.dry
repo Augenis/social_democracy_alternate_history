@@ -51,7 +51,7 @@ title: Scale down the censorship system and announce "openness".
 subtitle: This is desired by the reformists.
 unavailable-subtitle: The Politburo will not approve this.
 choose-if: grand_coalition >= 50
-on-arrival: glasnost_progress += 10
+on-arrival: glasnost_progress += 10; spd_relation += 15; rb_militancy += 6; sh_strength -= 3; hindenburg_relation += 7; dissent_percent += 6; z_relation -= 5; kpd_relation -= 10; ddp_relation -= 15
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
 
