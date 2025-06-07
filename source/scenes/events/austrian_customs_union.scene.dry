@@ -1,53 +1,49 @@
-title: Austrian customs union
-subtitle: The Foreign Ministry seeks closer ties to Austria...
+title: Reagan Bombs Libya
+subtitle: Another act of American aggression.
 new-page: true
-on-arrival: customs_union_seen = 1
+on-arrival: grand_coalition = spd_r; grand_coalition += sapd_r;
 tags: event
-view-if: year = 1931 and month >= 3 and foreign_minister_party != "SPD" and foreign_minister_party != "KPD" and customs_union == 0 and not eu
+view-if: year = 1986 and month >= 4
 max-visits: 1
 
 # TODO: this should happen regardless of the current state of the government...
 
-= Austrian Customs Union
+= Reagan Bombs Libya
 
-[? if spd_in_government: The [+ foreign_minister_party +] foreign minister has a proposal for a customs union with Austria. We can either accept or reject this agreement. ?]
-[? if not spd_in_government: The government of Chancellor [+ chancellor +] has a proposal for a customs union with Austria. Most likely, this will happen whatever we decide. ?]
+The American air force has carried out a series of bomb raids on Libya, a nominally socialist state ruled by Colonel Muammar Gaddafi. Gaddafi, fashioning himself as the new leader of the Arab world after the fall of Nasser, has become a notable sponsor of terrorism against the West, and the United States accused him of organizing a bombing of a nightclub in West Berlin which killed two American soldiers. Attempting to take down Gaddafi, American forces destroyed several targets on Libyan soldier - but the dictator survived and proclaims great victory against the West.
 
+For the past ten years, Gaddafi has been supported by us, both with generous supplies of arms (often wasted on failed attempts to invade Chad) and a large military mission in Libya. However, relations between us and Libya have become strained because of Gaddafi's failed ventures and his constant criticism of our political line.
 
-The nationalist right has long yearned for closer ties with Austria, with the eventual goal of the merger of the two German-speaking countries. A customs union with Austria is the first step towards this goal. Additionally, many believe that a union with Austria would improve our current economic circumstances.
-
-However, the Allies, especially France, are likely to object. This agreement would break the terms of the Versailles Treaty, and could lead to economic sanctions, further hurting our economy.
-
-- @let_it_happen: Let it happen.
-- @end_coalition: Stop this arrangement!
-- @end_toleration: Attempt to stop this arrangement!
+- @let_it_happen: Move our forces to the Mediterranean to intimidate the Americans and protect Libya.
+- @end_coalition: Limit ourselves to diplomatic protests.
+- @end_toleration: Can we use this to pressure Gaddafi?
 
 @let_it_happen
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+unavailable-subtitle: The Politburo will not approve this.
+choose-if: grand_coalition < 50
+on-arrival: rb_militancy = -5; rfb_militancy = -2; sh_strength = +5
 
-The customs union has been formed. Immediately, France and other neighboring countries lodge their protests. The longer-term response is yet to be seen.
+The Black Sea Fleet does emergency maneuvers and additional air wings are deployed to Libya, threatening to intercept American planes should any more bomb raids take place. Reagan denounces you for harboring a sponsor of international terrorism, and relations with the Western powers worsen noticeably.
 
 @end_coalition
-view-if: spd_in_government = 1
-on-arrival: coalition_dissent += 1; dvp_relation -= 5; z_relation -= 4; z_relation -= 3 if chancellor_party == "Z"; dvp_relation -= 3 if chancellor_party == "Z"
+on-arrival: rb_militancy = -1; kpd_relation -= 5; ddp_relation -= 7; dissent_percent += 2; dissent_percent += 3 if grand_coalition < 50
 
-We attempt to impress upon our coalition partners the gravity of the potential Allied response. The proposal is dead, although the DVP and Center are not pleased.
-
+We lodge diplomatic protests at the American bombings and cancel some less important meetings with American diplomats - a standard procedure in the Cold War which should not affect our relations with the US administration much. However, conservatives and hardliners in the Party leadership are frustrated at you giving up such an opportunity to expand our influence.
 
 @end_toleration
-view-if: spd_toleration = 1
-subtitle: This is difficult; all of the right-of-center parties support this policy.
+subtitle: Can Gaddafi be cowed?
 go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fail if spd_r + kpd_r + ddp_r < 50
 
+# WIP. things needed: at least 1 military modernization investment, hasn't done Glasnost yet, progress in making peace in Afghanistan.
+
 @end_toleration_success
-on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
-call: set_next_election_time
+on-arrival: rb_militancy = -2; sh_strength = +4; prussian_concordat_progress += 1;
 
-With the support of the KPD and [+ ddp_name +], we have successfully stopped the formation of the customs union. This results in the fall of the [+ chancellor +] government.
+We point to the failure of the Libyan army during the operation as well as the threat posed to Gaddafi to push him to make a more beneficial deal with us, more closely align with socialist orthodoxy, cease overt support for terrorists in Western countries as well as cooperate on raising the international oil price. In exchange, we offer some of our modern military technology to him, and promise to steadily withdraw from Afghanistan. 
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+Gaddafi agrees, though reluctantly. Thanks to his influence in OPEC and the Arab world, this should help us in any negotiations with the OPEC regarding international oil production. The West is, understandably, frightened by our arrangement.
 
 @end_toleration_fail
-on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sh_strength = -2;
 
-Unfortunately, the far-right parties united with the government to outvote us. The customs union will be formed.
+Gaddafi treats our attempts to pressure him in his moment of "victory" as a slap in the face and begins cutting his ties with us. The Soviet mission in Libya is steadily reduced. Ironically, this actually improves global tensions, and may perhaps hasten his overthrow later on.
