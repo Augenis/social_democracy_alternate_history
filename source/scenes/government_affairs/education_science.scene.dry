@@ -43,8 +43,8 @@ view-if: not last_advisor_action
 
 @increase_science
 title: Increase funding for scientific research.
-choose-if: budget >= -5
-unavailable-subtitle: Our scientific community is too restricted.
+choose-if: glasnost_progress >= 10
+unavailable-subtitle: Our intellectual community is too restricted.
 
 Socialism has always stood for science and rationality. The Soviet Union has been at the forefront of modern science, from electronics and engineering to the exploration of the Solar System. We must not lose our edge.
 
