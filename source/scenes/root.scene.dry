@@ -164,6 +164,7 @@ Q.rb_strength = 75;
 Q.sh_strength = 65;
 
 Q.afghan_war = 1;
+Q.china_study = 0;
 
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
