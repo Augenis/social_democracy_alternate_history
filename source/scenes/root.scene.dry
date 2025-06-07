@@ -163,6 +163,8 @@ Q.rb_strength = 75;
 // used for world tension
 Q.sh_strength = 65;
 
+Q.afghan_war = 1;
+
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.sh_banned = 0;
