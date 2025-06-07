@@ -1,34 +1,56 @@
-title: War Guilt Inquiry
+title: The China Card
 new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: war_guilt_timer = 6; month_actions += 1
-view-if: spd_in_government = 1 and war_guilt_timer = 0
+view-if: war_guilt_timer = 0
 card-image: img/reichstag_1.jpg
 max-visits: 1
 
-= Reichstag War Guilt Inquiry
+= The China Card
 
-The War Guilt Inquiry has been an intermittent Reichstag committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment up to President Hindenburg.
+Our fairly tepid relationship with the People's Republic of China devolved into open conflict after De-Stalinization and Mao's growing bitterness with the Union. Since the Ussuri River skirmishes of 1969, when our two nations almost ended up in war, we have been locked in a miniature cold war, competing over the communist movements of Asia and even Europe. Needless to say, such division in the socialist camp is not ideal.
 
-- @restart: Restart the inquiry.
-- @root: Do nothing.
+Relations have been warming up since Brezhnev's death, and the Chinese appear willing to make amends. Yet, to this day, they support the reactionary Mujahideen in Afghanistan - a wrench in any real reset of relations. 
+
+Much like you, Deng Xiaoping is pursuing reforms to the ossified economic system, and has had a head start. They appear to be working.
+
+- @restart: Improve relations with China.
+- @afghan: Request China to lift their support for the Mujahideen.
+- @commission: Send a commission to study China's Reform and Opening-Up.
+- @comecon: Invite China to COMECON.
 - @easy_discard
 - @cancel_advisor_action
 
 @restart
-on-arrival: war_guilt += 1
+on-arrival: rfb_militancy += 8; ddp_relation -= 2
 
-What is the goal of this tribunal?
+We have organized several meetings between Soviet and Chinese diplomats, during which we settled some ideological and political issues between our two countries.
 
-- @pure_history: To provide a historical record of the events of the war.
-- @rewrite: To revise the popular German histories and finally put to rest the "stabbed in the back" myth.
+@afghan
+unavailable-subtitle: Relations with China are too low.
+view-if: afghan_war == 1;
+choose-if: rfb_militancy >= 55
+on-arrival: rb_militancy -= 6; sh_strength += 4
 
-@pure_history
+# gives + war leverage, used to reach a positive negotiations result/pullout
 
-The history is being compiled, as it always has been.
+As we have rebuilt our relations with China, they have decided to withdraw their support for the Mujahideen - which includes training bases and generous streams of equipment. As a result, the American-Chinese coalition against the Union in Afghanistan has been broken - and the Westerners are displeased.
 
-@rewrite
-on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress += 1
+@commission
+unavailable-subtitle: [? if rfb_militancy < 40 : Relations with China are too low. ?] [? if breitscheid_advisor = 1 and levi_advisor = 1 : Nikolai Ryzhkov or Viktor Abalkin must be hired as an advisor. ?] 
+choose-if: rfb_militancy >= 40 and (breitscheid_advisor = 1 or levi_advisor = 1)
+on-arrival: rfb_militancy += 2; spd_r += 3; z_r -= 3; ddp_relation -= 5; kpd_relation -= 3; china_study += 1
 
-Destroying the "stabbed in the back" myth, in addition to finally correcting the historical record, would do a great deal to improve our party's reputation. This is why it would be resisted by the military establishment every step of the way.
+# Studying China allows you to take better options during economic reforms.
+
+Deng Xiaoping has been pursuing seemingly successful economic reforms since the late 70s, establishing "special economic zones" for limited private enterprise and foreign investment, and allowing a bottom-up approach to improve production according to local conditions. Agriculture has begun decollectivization and price controls are being lifted. It is dangerously revisionist and bourgeoisie-influenced to certain hardliners, but perhaps it can provide some solutions to our own economic stagnation?
+
+A commission led by Viktor Abalkin and Nikolai Ryzhkov is studying the Chinese economic reform and gathering feedback, with hopes of applying it back home.
+
+@comecon
+unavailable-subtitle: [? if rfb_militancy < 60 : Relations with China are too low. ?] 
+choose-if: rfb_militancy >= 60
+on-arrival: rfb_militancy += 12; rb_militancy -= 3; sh_strength += 2; kpd_coalition_dissent += 8; inflation_2 += 0.2; economic_growth_2 += 0.3; ddp_relation -= 6; kpd_relation -= 4
+
+After long negotiations, China has finally agreed to return to Comecon, our socialist bloc economic cooperation organization, as an observer member. This will greatly facilitate Sino-Soviet cooperation and international trade - and our economy is already experiencing a boost in growth as well as consumer goods supply. Of course, the United States is displeased and frightened, worried about the reconstruction of a Sino-Soviet bloc, but all they can do is complain and grumble.
