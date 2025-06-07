@@ -29,7 +29,7 @@ We have organized several meetings between Soviet and Chinese diplomats, during 
 
 @afghan
 unavailable-subtitle: Relations with China are too low.
-view-if: afghan_war == 1;
+view-if: afghan_war = 1
 choose-if: rfb_militancy >= 55
 on-arrival: rb_militancy -= 6; sh_strength += 4
 
