@@ -131,9 +131,9 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Political structure: Single-party dictatorship
 
-Economic structure: State planning
+Economic structure: [? if free_market_progress == 0: State planning ?][? if free_market_progress > 0 and free_market_progress < 11: State planning (minor private activity permitted) ?][? if free_market_progress > 10 and free_market_progress < 41: State planning (some private business permitted) ?][? if free_market_progress > 40: Mixed economy ?]
 
-Freedom of speech: Full censorship
+Freedom of speech: [? if glasnost_progress == 0: Full censorship ?][? if glasnost_progress > 0 and glasnost_progress < 11: Near-full censorship ?][? if glasnost_progress > 10 and glasnost_progress < 41: Limited censorship ?][? if glasnost_progress > 40: Partially free ?]
 
 CPSU position: Monopoly of power
 
