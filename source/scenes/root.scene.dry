@@ -142,6 +142,10 @@ Q.uskorenie = 0;
 Q.alcohol_campaign = 0;
 Q.corruption_campaign = 0;
 
+// Economic stuff
+// Measures how far you've gone in embracing the free market
+Q.free_market_progress = 0;
+
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
