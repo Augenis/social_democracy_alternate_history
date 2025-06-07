@@ -31,7 +31,7 @@ Several high profile articles by government secretaries, detailing the necessity
 @campaign
 title: Expand the "letters to the editor" system.
 subtitle: Lenin's old idea of cleansing society of problems, abandoned by Stalin.
-on-arrival: campaign_media += 1; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent);
+on-arrival: glasnost_progress += 3; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent);
 
 Vladimir Lenin argued that criticism of the socialist regime should be channeled through letters to the editors of newspapers, which would facilitate the elimination of shortcomings in socialist society. Stalin, however, did not carry out this proposal, believing that the Party needs not external assistance to identify problems - evidently, this is not the case.
 
@@ -40,7 +40,7 @@ We have allowed major newspapers to publish bolder and more thorough letters of 
 @ideological
 title: Reduce jamming of Western radio stations.
 subtitle: Perhaps there is no need of heavy-handed measures any longer?
-on-arrival: left_dissent -= 6; labor_dissent -= 6; center_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
+on-arrival: glasnost_progress += 5 
 
 Western capitalist propaganda stations such as BBC and Voice of America have traditionally been jammed on Soviet territory - however, if we believe socialism is superior to capitalism, our working class should be able to identify the lack of logic in their news broadcasts without the need of brutish measures. 
 
@@ -51,13 +51,15 @@ title: Scale down the censorship system and announce "openness".
 subtitle: This is desired by the reformists.
 unavailable-subtitle: The Politburo will not approve this.
 choose-if: grand_coalition >= 50
-on-arrival: radio += 1; resources -= 2; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 2*(1 - dissent); labor_dissent += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
+on-arrival: glasnost_progress += 10
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
 
 @radio_2
 title: Crack down on underground media.
 subtitle: -1 resources
-on-arrival: radio += 1; resources -= 1; new_middle_spd += 5*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+unavailable-subtitle: We can no longer implement such censorship measures.
+choose-if: glasnost_progress < 40
+on-arrival: glasnost_progress -= 5
 
 Underground *samizdat* literature and imports of Western press are eroding the Soviet people's loyalty to socialism. The KGB has begun a major drive rooting out these groups - however, many of them have years, if not decades of experience avoiding the law and abuse the high level of corruption to slip away.
