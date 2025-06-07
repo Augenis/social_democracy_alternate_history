@@ -39,7 +39,7 @@ on-arrival: spd_r -= 2; ddp_r += 1; z_r += 1; coalition_dissent += 5; hindenburg
 We have decided to go against the recommendations of the reformists, which weakens your standing among your allies somewhat. Perhaps you are not that much of a reformer after all.
 
 @fund_schutzbund
-on-arrival: resources -= 1; spd_r -= 3; ddp_r += 2; z_r += 1; coalition_dissent += 6; hindenburg_relation -= 6; spd_relation -= 12;
+on-arrival: resources -= 1; spd_r -= 3; ddp_r += 2; z_r += 1; coalition_dissent += 6; hindenburg_relation -= 6; spd_relation -= 12; kpd_coalition_dissent -= 5; rb_strength -= 3;
 subtitle: -1 resource
 unavailable-subtitle: The Politburo will not approve this.
 choose-if: grand_coalition < 50
