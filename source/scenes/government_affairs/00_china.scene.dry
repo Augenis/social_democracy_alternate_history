@@ -51,6 +51,6 @@ A commission led by Leonid Abalkin and Nikolai Ryzhkov is studying the Chinese e
 @comecon
 unavailable-subtitle: [? if rfb_militancy < 60 : Relations with China are too low. ?] 
 choose-if: rfb_militancy >= 60
-on-arrival: rfb_militancy += 12; rb_militancy -= 3; sh_strength += 2; kpd_coalition_dissent += 8; inflation_2 += 0.2; economic_growth_2 += 0.3; ddp_relation -= 6; kpd_relation -= 4
+on-arrival: china_comecon += 1; rfb_militancy += 12; rb_militancy -= 3; sh_strength += 2; kpd_coalition_dissent += 8; inflation_2 += 0.2; economic_growth_2 += 0.3; ddp_relation -= 6; kpd_relation -= 4
 
 After long negotiations, China has finally agreed to return to Comecon, our socialist bloc economic cooperation organization, as an observer member. This will greatly facilitate Sino-Soviet cooperation and international trade - and our economy is already experiencing a boost in growth as well as consumer goods supply. Of course, the United States is displeased and frightened, worried about the reconstruction of a Sino-Soviet bloc, but all they can do is complain and grumble.
