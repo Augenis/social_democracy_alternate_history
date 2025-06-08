@@ -1,84 +1,71 @@
-title: Dealing with Toleration
+title: International Trade
 new-page: true
 is-card: true
 card-image: img/portraits/BrüningHeinrich.jpg
-view-if: dealing_with_toleration_timer = 0 and spd_toleration and chancellor_party == "Z"
-on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
+view-if: dealing_with_toleration_timer = 0
+on-arrival: dealing_with_toleration_timer += 6; month_actions += 1; grand_coalition = spd_r; grand_coalition += sapd_r
 tags: govt_affairs
 #subtitle: Despite not being in government, we can still provide support.
 
-= Dealing with Toleration
+= International Trade
 
-We are currently acting as external support to the government of Chancellor [+ chancellor +]. How should we use our position?
+# unfinished
+International trade accounts for only a small sliver of our gross domestic product, and most of it is conducted with socialist countries in the Council of Mutual Economic Assistance, or COMECON. The imperialist Western powers claim that our products are lower quality and unmarketable. Still, despite nominally only making up a few percentages of our economy, trade with the West and independent states is important as it is the only way we can acquire certain goods and needed grain.
 
 - @break_toleration
 - @urge_against_austerity
 - @improve_relations
 - @new_grand_coalition
-- @stay_course: Stay the course, for stability's sake.
+- @vonc: Reduce spending on foreign aid.
+- @stay_course: No changes are needed.
 - @easy_discard
 
 @break_toleration
-view-if: not constructive_vonc
-title: End the toleration agreement with a vote of no confidence!
+unavailable-subtitle: [? if sh_strength > 50 : World tension is too high. ?] [? if trade_reforms = 0 : Our controls on foreign trade prevent us from meaningfully expanding foreign trade. ?]
+choose-if: sh_strength <= 50 and trade_reforms > 0
+title: Expand trade with the Western powers.
+on-arrival: rb_militancy += 8; free_market_progress += 5; sh_strength -= 4; kpd_coalition_dissent += 6; inflation_2 += 0.1; economic_growth_2 += 0.15; ddp_relation -= 10; kpd_relation -= 6; z_relation -= 4; sapd_relation += 6; coalition_dissent += 6; hindenburg_relation += 3; dissent_percent += 6
 
-Are we sure about this? A vote of no confidence would trigger new elections, and potentially an increased vote-share for the extremist parties.
+We have opened up our economy to Western imports somewhat, and certain American and European companies jump on the chance of selling cheap goods to an untapped foreign market. We argue that this is merely a case of the capitalists selling us the rope with which we will hang them - yet it doesn't seem like we're benefitting as much as we think - after all, the Westerners are still uninterested in buying our production and we thus resort to hard currency purchases or selling raw materials.
 
-- @vonc: Yes, end this arrangement!
-- @stay_course: No, we should stay the course.
-
-@vonc
-on-arrival: spd_in_government = 0; spd_toleration = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; left_dissent -= 5
-
-We have called for a vote of no confidence, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
-
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+Still, it is popular (except among the hardliners) and provides an influx of Western goods for select stores.
 
 @urge_against_austerity
-title: Urge the coalition against austerity politics, and to increase social spending.
-choose-if: budget >= 1
-unavailable-subtitle: This can only happen with a budget surplus.
-go-to: urge_success if dvp_relation >= 30 and z_relation >= 40; urge_failure if dvp_relation < 30 or z_relation < 40
+title: Expand trade with COMECON members.
+unavailable-subtitle: Our controls on foreign trade prevent us from meaningfully expanding foreign trade.
+choose-if: trade_reforms > 0
+on-arrival: sh_militancy -= 5; inflation_2 += 0.05; inflation_2 += 0.15 if china_comecon = 1; economic_growth_2 += 0.1; economic_growth_2 += 0.1 if china_comecon == 1; kpd_coalition_dissent += 2; kpd_coalition_dissent += 2 if china_comecon = 1
 
-@urge_success
-on-arrival: welfare += 1; budget -= 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent); z_relation -= 3; dvp_relation -= 3; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5;
-
-We have successfully urged the coalition parties to increase social spending! Unfortunately, the center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations.
-
-@urge_failure
-on-arrival: z_relation -= 3; dvp_relation -= 3
-
-Unfortunately, our negotiations have met with failure. The center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations.
-
+We have expanded trade ties with our allies in the Eastern Bloc and countries of socialist orientation in Africa and Asia. Because of their small markets and our overwhelming size, they cannot rescue our economy by themselves, but their societies will appreciate this. [? if china_comecon = 1 : However, growing trade with our new allies in China has provided our economy a much needed boost. ?]
 
 @improve_relations
-title: Improve relations with the parties of the coalition.
-on-arrival: z_relation += 5*(1-dissent); dvp_relation += 4*(1-dissent); left_dissent += 5;
+title: Reform our system of foreign trade and reduce controls.
+unavailable-subtitle: [? if grand_coalition < 50 : The Politburo will not approve this. ?] [? if free_market_progress < 10 : Not possible under a strictly centrally planned economy. ?]
+choose-if: free_market_progress > 9 and grand_coalition >= 50
+on-arrival: ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; dissent_percent += 3; trade_reforms += 1; rb_strength += 5 if rb_strength > 64; inflation_2 -= 0.15 if rb_strength > 64
 
-We have increased our level of contact and discussions with the parties of the coalition, primarily the Center Party and DVP.
+Foreign trade in the Union is centralized under the Ministry of Foreign Trade, which has a monopoly on negotiating and signing contracts with foreigners and make foreign trade plans. Trade is planned, approval for trade deals is slow, contract negotiations are delayed and covered with layers of bureaucracy, corruption and petty supervision.
 
-Our attempts to reach out to the center-right are met with disdain by leftists within our party.
-
-
-
+We have begun clearing out this rot, reforming or disestablishing unnecessary bureaucratic layers and making it easier for enterprises to form trade deals in a reasonable timeframe, which is already having a positive impact on the economy. [? if rb_strength > 64 : Unfortunately, because of enormous corruption, much of this effect has been minimized, and corrupt officials have begun abusing the freer trade system to siphon wealth. ?]
 
 @new_grand_coalition
-title: Can we join the government in a new grand coalition?
-view-if: neo_weimar_coalition >= 50
-choose-if: z_relation >= 50 and dvp_relation >= 30 and resources >= 2
-subtitle: We will need 2 resources to smooth out the process of forming the coalition.
-unavailable-subtitle: [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if dvp_relation < 30 : We do not have adequate relations with the DVP. ?] [? if resources < 2 : We do not have enough resources. ?]
-on-arrival: resources -= 2; spd_in_government = 1; in_grand_coalition = 1; spd_toleration = 0; left_dissent += 6; reformist_strength += 5; leverage = 20 if leverage >= 20
-achievement: constitutional_coalition
+title: Join international trade organizations.
+unavailable-subtitle: [? if grand_coalition < 50 : The Politburo will not approve this. ?] [? if free_market_progress < 10 : Not possible under a strictly centrally planned economy. ?] [? if sh_strength > 50 : World tension is too high. ?]
+choose-if: free_market_progress > 9 and grand_coalition >= 50 and sh_strength <= 50 
+on-arrival: rb_militancy += 5; sh_strength -= 4; free_market_progress += 5; rfb_militancy += 5; ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; economic_growth_2 += 0.1; kpd_coalition_dissent += 3; dissent_percent += 3; trade_reforms += 1
 
-Our negotiations have succeeded, and the Center Party and DVP have agreed to form a new coalition government with us!
+We previously stayed out of capitalist international trade agreements for obvious reasons, but perhaps there's no reason to be left out? We have formally requested observer status in the General Agreement on Tariffs and Trade and started working on joining other existing pacts and deals worldwide. Western observers laud your decision and believe that 'the Reformer' is willing to put the Cold War era confrontation to rest. This, however, requires us to liberalize our trade policies somewhat and is hardly supported by the conservatives in the Party leadership.
 
-We are now part of a "constitutional coalition" government that includes all parties except the extremists of the KPD, DNVP, and NSDAP. [+ chancellor +] will remain as chancellor. Leftists in our party are skeptical of this arrangement.
+@vonc
+subtitle: +1 resource
+unavailable-subtitle: There is nothing left to cut.
+choose-if: foreign_aid > 0
+on-arrival: ddp_relation -= 6; kpd_relation -= 2; resources += 1; rb_militancy += 5; sh_strength -= 5; dissent_percent += 6; foreign_aid -= 1
 
-- @election_1928.ministries: Now, we must select our ministries.
+# negative effects in Afghanistan
 
-
+We have decided to cut down on our lavish financial and military support for numerous aligned movements in the socialist sphere and the Third World. This is seen by the West as a step forward for international peace, but also surrenders a lot of our positions in Africa, Asia and the Americas, and is obviously despised by interventionist members of our party.
 
 @stay_course
 
-We will stay the course of toleration, for the sake of stability.
+There's no harm in that. The Union needs to be self sufficient, not rely on trade with the bourgeoisie.
