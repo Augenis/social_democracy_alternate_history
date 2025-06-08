@@ -145,6 +145,7 @@ Q.corruption_campaign = 0;
 // Economic stuff
 // Measures how far you've gone in embracing the free market
 Q.free_market_progress = 0;
+Q.trade_reforms = 0;
 
 // Measures how far you've gone in liberalizing society
 Q.glasnost_progress = 0;
