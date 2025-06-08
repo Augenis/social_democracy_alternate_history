@@ -29,7 +29,7 @@ subtitle: As secretary of propaganda, Yakovlev manages our policy on the media.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
-go-to: media
+go-to: 00_media
 
 @snap_election
 title: Agitate in the press
