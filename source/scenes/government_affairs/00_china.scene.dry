@@ -38,7 +38,7 @@ on-arrival: rb_militancy -= 6; sh_strength += 4
 As we have rebuilt our relations with China, they have decided to withdraw their support for the Mujahideen - which includes training bases and generous streams of equipment. As a result, the American-Chinese coalition against the Union in Afghanistan has been broken - and the Westerners are displeased.
 
 @commission
-unavailable-subtitle: [? if rfb_militancy < 40 : Relations with China are too low. ?] [? if breitscheid_advisor = 0 and levi_advisor = 0 : Nikolai Ryzhkov or Viktor Abalkin must be hired as an advisor. ?] 
+unavailable-subtitle: [? if rfb_militancy < 40 : Relations with China are too low. ?] [? if breitscheid_advisor = 0 and levi_advisor = 0 : Nikolai Ryzhkov or Leonid Abalkin must be hired as an advisor. ?] 
 choose-if: rfb_militancy >= 40 and (breitscheid_advisor = 1 or levi_advisor = 1)
 on-arrival: rfb_militancy += 2; spd_r += 3; z_r -= 3; ddp_relation -= 5; kpd_relation -= 3; china_study += 1
 
