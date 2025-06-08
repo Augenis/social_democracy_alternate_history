@@ -46,7 +46,7 @@ on-arrival: rfb_militancy += 2; spd_r += 3; z_r -= 3; ddp_relation -= 5; kpd_rel
 
 Deng Xiaoping has been pursuing seemingly successful economic reforms since the late 70s, establishing "special economic zones" for limited private enterprise and foreign investment, and allowing a bottom-up approach to improve production according to local conditions. Agriculture has begun decollectivization and price controls are being lifted. It is dangerously revisionist and bourgeoisie-influenced to certain hardliners, but perhaps it can provide some solutions to our own economic stagnation?
 
-A commission led by Viktor Abalkin and Nikolai Ryzhkov is studying the Chinese economic reform and gathering feedback, with hopes of applying it back home.
+A commission led by Leonid Abalkin and Nikolai Ryzhkov is studying the Chinese economic reform and gathering feedback, with hopes of applying it back home.
 
 @comecon
 unavailable-subtitle: [? if rfb_militancy < 60 : Relations with China are too low. ?] 
