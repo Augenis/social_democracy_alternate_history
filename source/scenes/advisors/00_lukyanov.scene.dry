@@ -35,7 +35,7 @@ title: Combat factionalism
 subtitle: Reduce dissent across the party.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; dissent_percent -= 3
+on-arrival: advisor_action_timer = 6; dissent_percent -= 4
 
 We have enforced party discipline to reduce dissent in the Politburo.
 
