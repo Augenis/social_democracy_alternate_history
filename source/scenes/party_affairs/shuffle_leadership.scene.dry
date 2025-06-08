@@ -62,13 +62,13 @@ Yakovlev has been removed as an advisor. Reformists disapprove.
 
 
 @remove_breitscheid
-title: Remove Breitscheid
+title: Remove Ryzhkov
 view-if: breitscheid_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: breitscheid_advisor = 0; spd_relation -= 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Ryzhkov has been removed as an advisor. Reformists disapprove.
 
 # reformists
 
@@ -366,8 +366,8 @@ go-to: advisor_menu
 Alexander Yakovlev is now an advisor.
 
 @add_breitscheid
-title: Kurt von Schleicher
-subtitle: Kurt von Schleicher is an "adopted son" of General Wilhelm Groener and the primary liaison between the Reichswehr and the government, as well as a member of Hindenburg's Kamarilla. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+title: Nikolai Ryzhkov
+subtitle: Nikolai Ryzhkov is a technocratic economist who is the current Chairman of the Council of Ministers - he reported directly to you during Andropov's tenure and he shares your ideas of economic reform. In your government, he is responsible for formulating your economic policy and is highly inspired by the successful Chinese economic reforms.
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -375,7 +375,7 @@ on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
-Rudolf Breitscheid is now an advisor.
+Nikolai Ryzhkov is now an advisor.
 
 # reformist
 
