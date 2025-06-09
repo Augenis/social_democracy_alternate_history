@@ -2,9 +2,9 @@ title: Media
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: media_timer <= 0
+view-if: 00_media_timer <= 0
 # reformist bloc check
-on-arrival: month_actions += 1; media_timer += 6; grand_coalition = spd_r; grand_coalition += sapd_r;
+on-arrival: month_actions += 1; 00_media_timer += 6; grand_coalition = spd_r; grand_coalition += sapd_r;
 card-image: img/sangerbund.jpg
 #subtitle: Setting the direction for our newspapers and radio.
 
