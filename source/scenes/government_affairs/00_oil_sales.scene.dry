@@ -1,9 +1,9 @@
 title: Oil Sales
 new-page: true
 is-card: true
-view-if: prussian_affairs_timer <= 0
+view-if: 00_oil_sales_timer <= 0
 #quick hardliner check for oil embargo:
-on-arrival: prussian_affairs_timer += 6; month_actions += 1; grand_coalition = kpd_r; grand_coalition += ddp_r;
+on-arrival: 00_oil_sales_timer += 6; month_actions += 1; grand_coalition = kpd_r; grand_coalition += ddp_r;
 tags: govt_affairs
 card-image: img/braun.jpg
 #subtitle: The state government of Prussia is a bulwark of democracy...
