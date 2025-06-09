@@ -2,8 +2,8 @@ title: The China Card
 new-page: true
 is-card: true
 tags: govt_affairs
-on-arrival: 00_china_timer = 6; month_actions += 1
-view-if: 00_china_timer = 0
+on-arrival: aa_china_timer = 6; month_actions += 1
+view-if: aa_china_timer = 0
 card-image: img/reichstag_1.jpg
 max-visits: 1
 
@@ -51,6 +51,7 @@ A commission led by Leonid Abalkin and Nikolai Ryzhkov is studying the Chinese e
 @comecon
 unavailable-subtitle: [? if rfb_militancy < 60 : Relations with China are too low. ?] 
 choose-if: rfb_militancy >= 60
+view-if: china_comecon = 0
 on-arrival: china_comecon += 1; rfb_militancy += 12; rb_militancy -= 3; sh_strength += 2; kpd_coalition_dissent += 8; inflation_2 += 0.2; economic_growth_2 += 0.3; ddp_relation -= 6; kpd_relation -= 4
 
 After long negotiations, China has finally agreed to return to Comecon, our socialist bloc economic cooperation organization, as an observer member. This will greatly facilitate Sino-Soviet cooperation and international trade - and our economy is already experiencing a boost in growth as well as consumer goods supply. Of course, the United States is displeased and frightened, worried about the reconstruction of a Sino-Soviet bloc, but all they can do is complain and grumble.
