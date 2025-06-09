@@ -1,9 +1,9 @@
 title: Oil Sales
 new-page: true
 is-card: true
-view-if: 00_oil_sales_timer <= 0
+view-if: aa_oil_sales_timer <= 0
 #quick hardliner check for oil embargo:
-on-arrival: 00_oil_sales_timer += 6; month_actions += 1; grand_coalition = kpd_r; grand_coalition += ddp_r;
+on-arrival: aa_oil_sales_timer += 6; month_actions += 1; grand_coalition = kpd_r; grand_coalition += ddp_r;
 tags: govt_affairs
 card-image: img/braun.jpg
 #subtitle: The state government of Prussia is a bulwark of democracy...
@@ -25,12 +25,16 @@ In addition, our allies are completely reliant on our oil, and their populations
 - @cancel_advisor_action
 
 @police_loyalty
+unavailable-subtitle: World tension is too high.
+choose-if: sh_strength <= 80
 subtitle: [+ sa_militancy +] resources gained.
 on-arrival: resources += sa_militancy;
 
 We maintain the current oil production and export levels.
 
 @police_strength
+unavailable-subtitle: World tension is too high.
+choose-if: sh_strength <= 80
 subtitle: [+ sa_militancy - 1 +] resources gained. Oil price increases.
 on-arrival: sa_militancy -= 1; resources += sa_militancy; sa_militancy += 2; sh_militancy += 5
 
