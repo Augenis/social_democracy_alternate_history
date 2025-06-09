@@ -496,17 +496,17 @@ Q.n_advisors = 3;
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
-            'iron_front', '00_media', 'enemies',
-            'party_organizations', '00_dachas_envelopes', 'reichsbanner',
+            'iron_front', 'aa_media', 'enemies',
+            'party_organizations', 'aa_dachas_envelopes', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
-            'police', '00_oil_sales', 'shuffle_cabinet', 'social_welfare',
+            'police', 'aa_oil_sales', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
-            '00_china', 'womens_rights', 'economic_democracy',
-            '00_international_trade',
+            'aa_china', 'womens_rights', 'economic_democracy',
+            'aa_international_trade',
             'constitutional_reform', 'labor_rights',
             'education_science', 'curriculum',
             // events
@@ -524,10 +524,10 @@ Q.ideology_timer = 0;
 Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
 Q.iron_front_timer = 0;
-Q.00_media_timer = 0;
+Q.aa_media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
-Q.00_dachas_envelopes_timer = 0;
+Q.aa_dachas_envelopes_timer = 0;
 Q.reichsbanner_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
@@ -551,11 +551,11 @@ Q.judiciary_timer = 0;
 Q.labor_affairs_timer = 0;
 Q.military_policy_timer = 0;
 Q.police_timer = 0;
-Q.00_oil_sales_timer = 0;
+Q.aa_oil_sales_timer = 0;
 Q.shuffle_cabinet_timer = 0;
 Q.social_welfare_timer = 0;
-Q.00_china_timer = 0;
-Q.00_international_trade_timer = 0;
+Q.aa_china_timer = 0;
+Q.aa_international_trade_timer = 0;
 Q.womens_rights_timer = 0;
 Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
