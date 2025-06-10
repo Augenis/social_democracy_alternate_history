@@ -5,7 +5,6 @@ tags: govt_affairs
 on-arrival: aa_china_timer = 6; month_actions += 1
 view-if: aa_china_timer = 0
 card-image: img/reichstag_1.jpg
-max-visits: 1
 
 = The China Card
 
