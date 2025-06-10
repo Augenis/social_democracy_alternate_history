@@ -1,7 +1,7 @@
 title: OPEC Increases Production
 subtitle: Oil prices have recovered.
 new-page: true
-on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sa_militancy = -1; economic_growth_2 -= 0.15
+on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sa_militancy -= 1; economic_growth_2 -= 0.15
 tags: event
 view-if: sa_militancy >= 4 and prussian_concordat == 0
 face-image: img/bankrun.jpg
