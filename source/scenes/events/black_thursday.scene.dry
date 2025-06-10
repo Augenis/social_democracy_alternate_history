@@ -1,25 +1,19 @@
-title: Black Thursday
-subtitle: The great stock market crash...
+title: OPEC Increases Production
+subtitle: Oil prices have recovered.
 new-page: true
-on-arrival: black_thursday_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 5; unemployed_nsdap += 5; unemployed += 2; budget -= 1 if budget > 0; dues -= 1 if dues > 2; inflation -= 1; economic_growth -= 1;
+on-arrival: prussian_concordat_progress -= 1 if prussian_concordat_progress > 0; sa_militancy = -1; economic_growth_2 -= 0.15
 tags: event
-view-if: year = 1929 and month >= 10
-max-visits: 1
+view-if: sa_militancy >= 4 and prussian_concordat == 0
 face-image: img/bankrun.jpg
 
-= Black Thursday
+= OPEC Increases Production
 
-The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
+As worldwide oil prices have recovered, the OPEC have decided to relax their limits on member state oil production, and a flood of cheap Persian Gulf oil once again comes to the world market. Other oil producing countries such as Mexico, the US and the North Sea countries have increased their extraction.
 
+In addition, OPEC is now less interested in making any agreements with us, as they are no longer worried about handling the oil glut.
 
-- @cap: It is the nature of capitalism...
-- @do_something: We must do something to stop the suffering...
+- @cap: Understood.
 
 @cap
 
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
-
-@do_something
-on-arrival: crisis_urgency += 1
-
-What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
+The worldwide oil price has fallen. Obviously, this means less oil export revenues for us.
