@@ -42,7 +42,7 @@ on-arrival: baltic_party = "Reformist"; baltic_nationalism += 5; republics_rooto
 
 We are continuing our uprooting of entrenched corrupt officials in the Union Republics.
 
-Promising reformists *Algirdas Brazauskas*, *Jānis Vagris* and *Vaino Väljas* have been put in power in fhe Lithuanian, Latvian and Estonian Soviet Socialist Republics respectively. The Baltic republics have long been a problem region for the Union due to deeply entrenched nationalist sympathies among their population, but their superior quality of life and economic progress will also make them good places for reformist experimentation. 
+Promising reformists *Algirdas Brazauskas*, *Jānis Vagris* and *Vaino Väljas* have been put in power in the Lithuanian, Latvian and Estonian Soviet Socialist Republics respectively. The Baltic republics have long been a problem region for the Union due to deeply entrenched nationalist sympathies among their population, but their superior quality of life and economic progress will also make them good places for reformist experimentation. 
 
 @remove_caucasus
 on-arrival: caucasus_party = "Reformist"; caucasus_nationalism += 5; republics_rootout_corruption += 1
