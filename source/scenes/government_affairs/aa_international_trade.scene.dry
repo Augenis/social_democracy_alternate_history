@@ -24,7 +24,7 @@ International trade accounts for only a small sliver of our gross domestic produ
 unavailable-subtitle: [? if sh_strength > 50 : World tension is too high. ?] [? if trade_reforms = 0 : Our controls on foreign trade prevent us from meaningfully expanding foreign trade. ?]
 choose-if: sh_strength <= 50 and trade_reforms > 0
 title: Expand trade with the Western powers.
-on-arrival: rb_militancy += 8; free_market_progress += 5; sh_strength -= 4; kpd_coalition_dissent += 6; inflation_2 += 0.1; economic_growth_2 += 0.15; ddp_relation -= 10; kpd_relation -= 6; z_relation -= 4; sapd_relation += 6; coalition_dissent += 6; hindenburg_relation += 3; dissent_percent += 6
+on-arrival: rb_militancy += 8; free_market_progress += 5; sh_strength -= 4; kpd_coalition_dissent += 6; inflation_2 += 0.1; economic_growth_2 += 0.15; ddp_relation -= 10; kpd_relation -= 6; z_relation -= 4; sapd_relation += 6; coalition_dissent += 6; hindenburg_relation += 3; dissent_percent += 6; baltic_nationalism += 5; ukrbel_nationalism += 3; caucasus_nationalism += 2; sh_militancy += 5
 
 We have opened up our economy to Western imports somewhat, and certain American and European companies jump on the chance of selling cheap goods to an untapped foreign market. We argue that this is merely a case of the capitalists selling us the rope with which we will hang them - yet it doesn't seem like we're benefitting as much as we think - after all, the Westerners are still uninterested in buying our production and we thus resort to hard currency purchases or selling raw materials.
 
@@ -42,7 +42,7 @@ We have expanded trade ties with our allies in the Eastern Bloc and countries of
 title: Reform our system of foreign trade and reduce controls.
 unavailable-subtitle: [? if grand_coalition < 50 : The Politburo will not approve this. ?] [? if free_market_progress < 10 : Not possible under a strictly centrally planned economy. ?]
 choose-if: free_market_progress > 9 and grand_coalition >= 50
-on-arrival: ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; dissent_percent += 3; trade_reforms += 1; rb_strength += 5 if rb_strength > 64; inflation_2 -= 0.15 if rb_strength > 64
+on-arrival: ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; dissent_percent += 3; trade_reforms += 1; rb_strength += 5 if rb_strength > 64; inflation_2 -= 0.15 if rb_strength > 64; baltic_nationalism += 4; ukrbel_nationalism += 2; caucasus_nationalism += 2; sh_militancy += 4
 
 Foreign trade in the Union is centralized under the Ministry of Foreign Trade, which has a monopoly on negotiating and signing contracts with foreigners and make foreign trade plans. Trade is planned, approval for trade deals is slow, contract negotiations are delayed and covered with layers of bureaucracy, corruption and petty supervision.
 
@@ -52,7 +52,7 @@ We have begun clearing out this rot, reforming or disestablishing unnecessary bu
 title: Join international trade organizations.
 unavailable-subtitle: [? if grand_coalition < 50 : The Politburo will not approve this. ?] [? if free_market_progress < 10 : Not possible under a strictly centrally planned economy. ?] [? if sh_strength > 50 : World tension is too high. ?]
 choose-if: free_market_progress > 9 and grand_coalition >= 50 and sh_strength <= 50 
-on-arrival: rb_militancy += 5; sh_strength -= 4; free_market_progress += 5; rfb_militancy += 5; ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; economic_growth_2 += 0.1; kpd_coalition_dissent += 3; dissent_percent += 3; trade_reforms += 1
+on-arrival: rb_militancy += 5; sh_strength -= 4; free_market_progress += 5; rfb_militancy += 5; ddp_relation -= 6; kpd_relation -= 2; inflation_2 += 0.2; economic_growth_2 += 0.1; kpd_coalition_dissent += 3; dissent_percent += 3; trade_reforms += 1; baltic_nationalism += 4; ukrbel_nationalism += 2; caucasus_nationalism += 2; sh_militancy += 4
 
 We previously stayed out of capitalist international trade agreements for obvious reasons, but perhaps there's no reason to be left out? We have formally requested observer status in the General Agreement on Tariffs and Trade and started working on joining other existing pacts and deals worldwide. Western observers laud your decision and believe that 'the Reformer' is willing to put the Cold War era confrontation to rest. This, however, requires us to liberalize our trade policies somewhat and is hardly supported by the conservatives in the Party leadership.
 
@@ -60,7 +60,7 @@ We previously stayed out of capitalist international trade agreements for obviou
 subtitle: +1 resource
 unavailable-subtitle: There is nothing left to cut.
 choose-if: foreign_aid > 0
-on-arrival: ddp_relation -= 6; kpd_relation -= 2; resources += 1; rb_militancy += 5; sh_strength -= 5; dissent_percent += 6; foreign_aid -= 1
+on-arrival: ddp_relation -= 6; kpd_relation -= 2; resources += 1; rb_militancy += 5; sh_strength -= 5; dissent_percent += 6; sh_militancy += 6; foreign_aid -= 1
 
 # negative effects in Afghanistan
 
