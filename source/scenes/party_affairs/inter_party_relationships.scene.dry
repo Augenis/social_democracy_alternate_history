@@ -16,8 +16,8 @@ That's not to say that the Union Republics are completely loyal to the centre. T
 
 Finally, keep in mind that *nationalist sentiment*, though suppressed, still brews in the Union, and could whip up a storm if left unchecked.
 
-- @remove: Remove corrupt Republic leaders and replace them with your allies.
 - @center: Strengthen our bonds with the Catholic Center Party.
+- @remove: Remove corrupt Republic leaders and replace them with your allies.
 - @kpd: Work towards repairing relationships with the Communist Party.
 - @spd_alone: The SPD can stand alone for now.
 - @easy_discard
@@ -26,10 +26,10 @@ Finally, keep in mind that *nationalist sentiment*, though suppressed, still bre
 subtitle: Clear out the rot of the Stagnation Era.
 view-if: republics_rootout_corruption < 4
 on-arrival: glasnost_progress += 3; coalition_dissent += 3; spd_r += 3; z_r -= 1; kpd_r -= 2; dissent_percent += 3; rb_strength -= 3; hindenburg_relation += 5
-go-to: remove_casia if republics_rootout_corruption = 0; remove_baltic if republics_rootout_corruption = 1; remove_caucasus if republics_rootout_corruption = 2; remove_ukrbel if republics_rootout_corruption = 3;
+go-to: remove_casia if republics_rootout_corruption = 0; remove_baltic if republics_rootout_corruption = 1; remove_caucasus if republics_rootout_corruption = 2; remove_ukrbel if republics_rootout_corruption = 3
 
 @remove_casia
-on-arrival: casia_party = "Reformist"; casia_nationalism += 5; republics_rootout_corruption += 1;
+on-arrival: casia_party = "Reformist"; casia_nationalism += 5; republics_rootout_corruption += 1
 
 We have begun a campaign of rooting out old Brezhnevite leaders of the Union Republics. As many of them can easily be implicated in corrupt schemes or similar deals, they are easy to topple and replace with younger cadres who are more closely aligned to you.
 
@@ -38,21 +38,21 @@ In Central Asia, which has long been a haven for corrupt officials, we have repl
 Similarly, we have removed entrenched former leaders in Tajikistan, Uzbekistan and Kyrgyzstan.
 
 @remove_baltic
-on-arrival: baltic_party = "Reformist"; baltic_nationalism += 5; republics_rootout_corruption += 1;
+on-arrival: baltic_party = "Reformist"; baltic_nationalism += 5; republics_rootout_corruption += 1
 
 We are continuing our uprooting of entrenched corrupt officials in the Union Republics.
 
 Promising reformists *Algirdas Brazauskas*, *Jānis Vagris* and *Vaino Väljas* have been put in power in fhe Lithuanian, Latvian and Estonian Soviet Socialist Republics respectively. The Baltic republics have long been a problem region for the Union due to deeply entrenched nationalist sympathies among their population, but their superior quality of life and economic progress will also make them good places for reformist experimentation. 
 
 @remove_caucasus
-on-arrival: caucasus_party = "Reformist"; caucasus_nationalism += 5; republics_rootout_corruption += 1;
+on-arrival: caucasus_party = "Reformist"; caucasus_nationalism += 5; republics_rootout_corruption += 1
 
 We are continuing our uprooting of entrenched corrupt officials in the Union Republics.
 
 Clearing out the rot in the Caucasus, we have put *Suren Arutnyunyan* in power in the Armenian SSR and replaced the established Brezhnev era machine in Azerbaijan with a new government led by diplomat and strong supporter of detente *Abdurrahman Vazirov*. The two leaders will be tasked to control the existing nationalist sentiments in both countries, especially possible tensions over the Nagorno-Karabakh region.
 
 @remove_ukrbel
-on-arrival: ukrbel_party = "Reformist"; ukrbel_nationalism += 5; republics_rootout_corruption += 1;
+on-arrival: ukrbel_party = "Reformist"; ukrbel_nationalism += 5; republics_rootout_corruption += 1
 
 We are continuing our uprooting of entrenched corrupt officials in the Union Republics.
 
