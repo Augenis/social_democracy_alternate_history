@@ -25,8 +25,8 @@ Finally, keep in mind that *nationalist sentiment*, though suppressed, still bre
 @liberals
 subtitle: Clear out the rot of the Stagnation Era.
 view-if: republics_rootout_corruption < 4
-go-to: remove_casia if republics_rootout_corruption = 0; remove_baltic if republics_rootout_corruption = 1; remove_caucasus if republics_rootout_corruption = 2; remove_ukrbel if republics_rootout_corruption = 3;
 on_arrival: glasnost_progress += 3; coalition_dissent += 3; spd_r += 3; z_r -= 1; kpd_r -= 2; dissent_percent += 3; rb_strength -= 3; hindenburg_relation += 5
+go-to: remove_casia if republics_rootout_corruption = 0; remove_baltic if republics_rootout_corruption = 1; remove_caucasus if republics_rootout_corruption = 2; remove_ukrbel if republics_rootout_corruption = 3;
 
 @remove_casia
 on_arrival: casia_party = "Reformist"; casia_nationalism += 5; republics_rootout_corruption += 1;
