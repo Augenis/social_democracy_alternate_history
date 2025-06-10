@@ -16,13 +16,13 @@ That's not to say that the Union Republics are completely loyal to the centre. T
 
 Finally, keep in mind that *nationalist sentiment*, though suppressed, still brews in the Union, and could whip up a storm if left unchecked.
 
-- @remove: Remove corrupt Republic leaders and replace them with your allies.
+- @remove_leaders: Remove corrupt Republic leaders and replace them with your allies.
 - @center: Strengthen our bonds with the Catholic Center Party.
 - @kpd: Work towards repairing relationships with the Communist Party.
 - @spd_alone: The SPD can stand alone for now.
 - @easy_discard
 
-@remove
+@remove_leaders
 subtitle: Clear out the rot of the Stagnation Era.
 view-if: republics_rootout_corruption < 4
 go-to: remove_casia if republics_rootout_corruption = 0; remove_baltic if republics_rootout_corruption = 1; remove_caucasus if republics_rootout_corruption = 2; remove_ukrbel if republics_rootout_corruption = 3;
