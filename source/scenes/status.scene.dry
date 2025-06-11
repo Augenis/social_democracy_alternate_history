@@ -16,9 +16,9 @@ if (Q.economic_growth) {
 
 = The Government
 
-[+ month : month +] [+ year +]
+ {! <center><img src="img/Gorbachev_status.jpg"></center> !}
 
-GenSec: [+ president +]
+**[+ month : month +] [+ year +]**
 
 Resources available: [+ resources +]
 
