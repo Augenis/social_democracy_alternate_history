@@ -16,7 +16,7 @@ That's not to say that the Union Republics are completely loyal to the centre. T
 
 Finally, keep in mind that *nationalist sentiment*, though suppressed, still brews in the Union, and could whip up a storm if left unchecked.
 
-- @center: Strengthen our bonds with the Catholic Center Party.
+- @center: Root out nationalist sentiment in the Republics.
 - @remove: Remove corrupt Republic leaders and replace them with your allies.
 - @kpd: Work towards repairing relationships with the Communist Party.
 - @spd_alone: The SPD can stand alone for now.
@@ -101,11 +101,11 @@ on-arrival: kpd_relation += 3*(1 - dissent); reformist_dissent += 1
 After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
 
 @center
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if spd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+choose-if: glasnost_progress <= 50
+unavailable-subtitle: We can no longer control the media.
+on-arrival: baltic_nationalism -= 4; casia_nationalism -= 4; caucasus_nationalism -= 4; ukrbel_nationalism -= 4; hindenburg_relation -= 2 
+
+Our censors have curtailed or even banned certain suspicious articles and magazines and our secret services have increased pressure on known sources of nationalist activity. In addition, our agents infiltrating these organizations have raised a ruckus, fomenting splits and encouraging internal squabbles.
 
 @center_op
 on-arrival: z_relation += 5*(1 - dissent)
