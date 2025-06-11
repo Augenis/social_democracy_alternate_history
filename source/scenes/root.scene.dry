@@ -161,6 +161,11 @@ Q.sh_militancy = 30;
 // used for corruption
 Q.rb_strength = 75;
 
+// yeltsin things
+Q.yeltsin_politburo = 0;
+Q.yeltsin_russia = 0;
+Q.yeltsin_interregional_group = 0;
+
 // used for world tension
 Q.sh_strength = 65;
 
