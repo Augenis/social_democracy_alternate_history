@@ -1,42 +1,32 @@
-title: Emergency budget cuts
-subtitle: Chancellor [+ chancellor +] proposes significant cuts to social spending.
+title: "Boris, you are wrong!"
+subtitle: Yeltsin and Ligachev are feuding.
 new-page: true
-view-if: (year == 1929 or year == 1930 or year == 1931 or year == 1932) and month >= 12 and chancellor == "Brüning" and spd_in_government == 0 and (unemployed > 15 or (year == 1929 and unemployed > 10)) and welfare >= 0 and emergency_cuts_timer = 0
-on-arrival: emergency_cuts_seen = 1; emergency_cuts_timer = 12
+view-if: ((year == 1986 and month >= 5) or year >= 1987) and yeltsin_politburo == 1 and glasnost_progress < 50 and free_market_progress < 50 and emergency_cuts_timer = 0
+on-arrival: emergency_cuts_seen = 1; emergency_cuts_timer = 8
 tags: event
 max-visits: 4
 
-= Emergency budget cuts
+= "Boris, you are wrong!"
 
-Due to the crisis of the Great Depression, government budgets have fallen and welfare spending has risen substantially. Chancellor [+ chancellor +] has used Article 48 of the constitution in order to pass an emergency bill cutting welfare spending.
+Even though it was Yegor Ligachev who brought Boris Yeltsin to the Central Committee and the Politburo, the two men have quickly begun feuding. In the Central Committee, Yeltsin has quickly revealed himself to be an uncontrollable lone wolf, eager to criticize you, claim that you are building a "personality cult" and demand greater democratization and reform. As representative of the moderate Party cadres, Ligachev has always been the first to shoot back at Yeltsin.
 
-[? if spd_toleration : If we reject this, it would mean the end of the toleration agreement, and [+ chancellor +] would likely dissolve the Reichstag and call new elections. Of course, the workers are opposed to this policy, although it might be necessary for economic and political stability. ?]
+Meetings of the Party leadership have become increasingly heated as a result - and for many of your allies, it is Yeltsin who is responsible. On the other hand, even Ligachev cannot deny that he is promising and capable - if only he learned when to shut up.
 
-- @nothing_to_do: There is nothing we can do.
 - @vote_no
 - @vote_yes
 
-@nothing_to_do
-view-if: spd_toleration == 0
-on-arrival: welfare -= 1; unemployed += 2; unemployed_nsdap += 4; unemployed_kpd += 3; unemployed_spd += 2; pro_republic -= 4; budget += 1; inflation -= 2; economic_growth -= 0.5;
-
-The emergency policy passes under emergency rules, as the Reichstag is currently dissolved. The Nazis use this as a recruiting tool, and so do we.
-
-
 @vote_no
-title: Vote against this measure, ending the toleration agreement.
-view-if: spd_toleration
-on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0; pro_republic -= 5
-call: set_next_election_time
+title: Support Ligachev - Yeltsin has gone too far.
+on-arrival: yeltsin_politburo = 0; glasnost_progress += 3; spd_r -= 5; z_r += 3; kpd_r += 1; ddp_r += 1; hindenburg_relation -= 6; coalition_dissent += 6; baltic_nationalism += 3; caucasus_nationalism += 3; ukrbel_nationalism += 2; sh_militancy += 2; dissent_percent -= 3; spd_relation -= 5
 
-We have broken with the [+ chancellor +] government, and have voted against them in a vote of no confidence. Welfare has been saved, but at what cost?
+Yeltsin attempts to one-up you by making an unprecedented move - announcing his resignation from the Politburo, the first in Soviet history to do so. However, he then has to endure outright days of constant, ceaseless attacks from the entire Party, hours upon hours of speeches from his former allies criticizing him over a five minute remark.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+This takes a mental and physical toll on him, he attempts to repent and is hospitalized a few days later because of a "heart attack". You, however, suspect that it's how Moscow officials tried to cover up a suicide attempt. Yeltsin is dragged out of hospital for one more "struggle session" before he is finally allowed to resign.
 
+Politburo meetings are going to be calmer from now on - but perhaps at a cost? Yakovlev informs you that there has been an outcry of support for Yeltsin among the Russian people - and that he is the first to willingly resign from such a high office has given him a powerful anti-establishment aura.
 
 @vote_yes
-title: Vote in favor of this measure to continue the toleration agreement.
-view-if: spd_toleration
-on-arrival: welfare -= 1; unemployed += 2; left_dissent += 10; labor_dissent += 10; workers_spd *= 0.9; unemployed_spd *= 0.9; unemployed_nsdap += 5; unemployed_kpd += 5; workers_nsdap += 5; workers_kpd += 5; workers_spd -= 4 if welfare < 0; unemployed_spd -= 5 if welfare < 0; pro_republic -= 4; kpd_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5;
+title: Defend Yeltsin - some debate and criticism is necessary for our Party to improve.
+on-arrival: glasnost_progress += 5; spd_r += 1; z_r -= 1; coalition_dissent += 4; baltic_nationalism += 4; caucasus_nationalism += 4; ukrbel_nationalism += 3; casia_nationalism += 2; sh_militancy += 3; dissent_percent += 6; z_relation -= 4; kpd_relation -= 5; ddp_relation -= 6
 
-We try to convince the workers that this policy is necessary in order to maintain a stable parliamentary government, and to deal with the fiscal consequences of the depression. Still, this policy provides excellent recruiting fodder for Nazis and Communists.
+By defending Yeltsin, we ultimately have to concede that at least some of his criticisms were right - and overall contribute to a more "democratic" atmosphere in Party leadership meetings. But also a more conflictive one - Ligachev and other conservative members of the Party are not going to take this well.
