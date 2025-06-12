@@ -1,48 +1,43 @@
-title: The Right calls a vote of no confidence against the current government!
-subtitle: We have angered our coalition partners too much...
+title: The Politburo is attempting to remove you from office!
+subtitle: Politburo dissent has grown too high.
 new-page: true
 on-arrival: tried_supporting_kpd = 0
-view-if: spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50 and not constructive_vonc
+view-if: spd_r + sapd_r < 50 and dissent_percent >= 50 and year >= 1986 and month > 1
 tags: event
 go-to: vonc_menu
 
 # Options: spend relations to reduce coalition_dissent, ask for kpd to abstain
 # (lmao KPD toleration arc...)
 
-= Vote of No Confidence
+= Challenge in the Politburo
 
-[? if in_grand_coalition : The DVP ?][? if in_weimar_coalition or in_popular_front or in_minority_government: The Center Party ?] has called for a vote of no confidence against us, due to our various policies and disagreements. If this succeeds, there will be an election in a few months.
+Conservatives in the Politburo have begun a persistent campaign of criticism towards you, and rumors in the corridors inform you that they are considering a "Leninist" candidate to challenge you for General Secretary in the next Party Congress, whenever it may be. 
+
+We have yet to form a *"Gorbachev Majority"* in the Party leadership, so this challenge could actually topple you from your post, unless you do something to counter the conservatives.
 
 @vonc_menu
 
-- @try_assuage: Try to assuage our partners.
-- @support_kpd: Could we get the KPD to abstain?
-- @let_it_happen: Let the vote happen.
-
-@try_assuage
-
-How do we assuage our partners?
-
-- @give_up_prussia: Give up on leadership of Prussia.
-- @austerity: Enact a massive austerity plan.
-- @resources: Use our resources to reduce dissent within the coalition.
-- @support_kpd: Could we get the KPD to abstain?
-- @let_it_happen: Never mind. Let the vote happen.
+- @give_up_prussia: Can we rely on the moderate bloc to support us?
+- @austerity: Can we start a press campaign to smear our rivals?
+- @resources: Can we bribe the dissenters with envelopes and higher offices?
+- @support_kpd: Can we call in the army?
+- @let_it_happen: I'm not worried. Let the vote happen.
 
 @give_up_prussia
+subtitle: This option will check your relations with the Moderates - though, if your situation is untenable, even they won't save you...
 view-if: spd_prussia == 1
 on-arrival: coalition_dissent = 0; spd_prussia = 0; prussian_government = "I"; reformist_dissent += 10; centrist_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; rural_spd -= 5; 
 
 Fine. We no longer control the government of Prussia. The vote has been called off.
 
 @austerity
-view-if: welfare >= 0 and not secularized
+subtitle: This option will check your popularity and the people's reform desire - though, if your situation is untenable, even they won't save you...
 on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front
 
 Fine. We enacted a massive austerity program to cut welfare, in order to maintain the stability of our coalition. The vote has been called off.
 
 @resources
-view-if: secularized = 0
+subtitle: This option will check the corruption level - though, if your situation is untenable, no bribes can save you...
 choose-if: resources >= 3
 unavailable-subtitle: We do not have enough resources.
 subtitle: -3 resources
@@ -51,9 +46,7 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
 
 @support_kpd
-choose-if: (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
-view-if: tried_supporting_kpd = 0
-on-arrival: tried_supporting_kpd = 1
+subtitle: This option will check your relations with the Army. It can always save you - if you can trust it.
 unavailable-subtitle: [? if communist_coalition < 3 : The KPD won't take part in parliamentary government. ?] [? if kpd_relation < 50 : The KPD is not friendly enough with us. ?] [? if (in_grand_coalition and kpd_r < dvp_r) or (in_weimar_coalition and kpd_r < z_r): The KPD does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the KPD. ?]
 
 If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the KPD. This could lead to broader cooperation in the future, for better or for worse.
@@ -91,11 +84,11 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; welfare -= 2;
 
 The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties. He immediately proceeds to cut welfare spending substantially.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+- @game_over: Game over.
 
 @let_it_happen_braun
 on-arrival: spd_caretaker = 1
 
 The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+- @game_over: Game over.
