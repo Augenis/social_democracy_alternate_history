@@ -1,13 +1,27 @@
-title: 1929
+title: 1986
 subtitle: A new year
-on-arrival: {!
-// see post_event.scene.dry for changes.
-Q.economic_growth -= 4;
-
-!}
+on-arrival: resources += budget_base_gain; resources -= budget_military; resources -= budget_social
 tags: event
-view-if: year = 1929 and month = 1
+view-if: year = 1986 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. The economy appears to be slackening; unemployment is increasing throughout the republic, although for the most part, people are still doing well.
+// YEARLY THINGS (might add to each event specifically, or just to the post_event.scene.dry, depends
+1986:
+// Consumer goods check which raises reform desire and nationalism (tho that can also be made annual I guess?)
+// Glasnost check which adjusts reform desire and nationalism
+// Economic reform check which affects economy
+// Adjust base earnings depending on GNP growth
+// Give budget for next year
+
+A new year begins. 
+
+The Ministry of Finance presents our budget for the following fiscal year:
+
+*Total income:* [+ budget_base_gain +]
+
+*Deducted for military expenditures:* [+ budget_military +]
+
+*Deducted for social expenditures:* [+ budget_social +]
+
+Our resources have been changed by [+ budget_base_gain - budget_military - budget_social +].
