@@ -2,7 +2,7 @@ title: The Politburo is attempting to remove you from office!
 subtitle: Politburo dissent has grown too high.
 new-page: true
 on-arrival: tried_supporting_kpd = 0
-view-if: spd_r < 50 and dissent_percent >= 5 and year >= 1985 and month > 1
+view-if: spd_r < 50 and dissent_percent >= 40 and year >= 1986 and month > 1
 tags: event
 go-to: vonc_menu
 
