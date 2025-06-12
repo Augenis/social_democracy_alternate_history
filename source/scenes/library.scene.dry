@@ -210,48 +210,56 @@ Officially, factions in the Communist Party of the Soviet Union are banned and a
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
-
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
-
-Strength: [+ left_strength : strength +]
-
-Dissent: [+ left_dissent : dissent +]
-
-**Centrists**
-
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
-
-Strength: [+ center_strength : strength +]
-
-Dissent: [+ center_dissent : dissent +]
-
-**Labor**
-
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
-
-Strength: [+ labor_strength : strength +]
-
-Dissent: [+ labor_dissent : dissent +]
-
 **Reformists**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+The "Gorbachev Bloc" in the Politburo and Central Committee, behind you and your reform agenda. Generally younger cadres who were promoted during the late Brezhnev and Andropov periods, and who fondly remember the first attempts at liberalization in the 1950s. They believe that the Union is in decline and requires an acceleration, through some kind of reform to the economic system, to rebound, while at the same time being sympathetic to media "openness" and detente with the West.
 
-Strength: [+ reformist_strength : strength +]
+Notable representatives of this faction are Alexander Yakovlev, Nikolai Ryzhkov, Eduard Shervardnadze, and, of course, you.
 
-Dissent: [+ reformist_dissent : dissent +]
+Strength: [+ spd_r +]%
+
+Relationship: [+ spd_relation : relationships +]
+
+**Moderates**
+
+Moderates are a vague grouping between the reformist and conservative poles which dominate the Party. Oftentimes they are veteran members who have come around to reform as a necessity, but will push back if it goes too far. As time passes, they are likely to decline as veterans either die out or make up their mind.
+
+Notable representatives of this faction are Andrei Gromyko and Yegor Ligachev.
+
+Strength: [+ z_r +]%
+
+Relationship: [+ z_relation : relationships +]
+
+**Conservatives**
+
+The Conservative bloc is made up of veterans of the Brezhnev era and supporters of the short-lived General Secretary Konstantin Chernenko. Strongly against liberalisation and reform, often highly corrupt and in advanced age - though there are exceptions. They also dominate the leadership of the Union Republics, most of whom are led by Brezhnev era appointees. In foreign affairs, they oppose ideas of detente to an extent and wish to maintain the Union's positions worldwide.
+
+Notable representatives of this faction are Viktor Grishin and Grigory Romanov.
+
+Strength: [+ kpd_r +]%
+
+Relationship: [+ kpd_relation : relationships +]
+
+**Hardliners**
+
+Hardliners oftentimes overlap with Conservatives, but their goal is to preserve the Union in its totalitarian state via any means necessary. They hold sympathies towards the Stalin era, to an extent, and are aggressively against your reform program, to the point where they could consider "saving the Union" through violent means if they find no other recourse.
+
+Notable representatives of this faction are Volodymyr Shcherbytsky and Nina Andreyeva.
+
+Strength: [+ ddp_r +]%
+
+Relationship: [+ ddp_relation : relationships +]
 
 @neorevisionists
 go-to: menu
 
-**Neorevisionists**
+**Liberals**
 
 Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
 
-Strength: [+ neorevisionist_strength : strength +]
+Strength: [+ sapd_r +]%
 
-Dissent: [+ neorevisionist_dissent : dissent +]
+Relationship: [+ sapd_relation : relationships +]
 
 @paramilitaries
 on-arrival: {!
