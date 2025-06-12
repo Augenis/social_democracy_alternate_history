@@ -150,9 +150,14 @@ Q.trade_reforms = 0;
 // Measures how far you've gone in liberalizing society
 Q.glasnost_progress = 0;
 
-// The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
+// Budget stuff
+// it is very tough to figure out how much the USSR spent on military vs social services... but for the sake of abstraction it is gonna be 2/2
+// the base gain is reduced by falling economy, raised by higher taxes - starts at 6
+Q.budget_base_gain = 6;
+Q.budget_military = 2;
+Q.budget_social = 2;
+
+// Replaced with various other effects
 Q.rb_militancy = 20;
 Q.rfb_militancy = 35;
 Q.sa_militancy = 2;
